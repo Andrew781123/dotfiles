@@ -33,7 +33,9 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("nyoom-engineering/oxocarbon.nvim")
+	use("catppuccin/nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -44,7 +46,7 @@ return packer.startup(function(use)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
-	use("numToStr/Comment.nvim")
+	use({ "numToStr/Comment.nvim", requires = { "JoosepAlviste/nvim-ts-context-commentstring" } })
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -81,7 +83,7 @@ return packer.startup(function(use)
 		branch = "main",
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
+			{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 		},
 	}) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
@@ -110,6 +112,21 @@ return packer.startup(function(use)
 
 	-- copilot
 	use("github/copilot.vim")
+
+	-- dressing
+	use("stevearc/dressing.nvim")
+
+	-- which key
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup()
+		end,
+	})
+
+	-- harpoon
+	use("nvim-lua/plenary.nvim")
+	use("ThePrimeagen/harpoon")
 
 	if packer_bootstrap then
 		require("packer").sync()
