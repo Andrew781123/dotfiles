@@ -38,5 +38,7 @@ gitsigns.setup({
 
 		map("n", "<leader>tb", gs.toggle_current_line_blame)
 		map("n", "<leader>uh", gs.undo_stage_hunk)
+		map("n", "<leader>ph", gs.preview_hunk)
+		map("n", "<leader>dh", gs.diffthis)
 	end,
 })

@@ -10,6 +10,7 @@ lualine.setup({
 		theme = "catppuccin",
 		always_divide_middle = false,
 		globalstatus = true,
+		section_separators = { left = "", right = "" },
 	},
 	sections = {
 		lualine_a = { "mode" },
@@ -24,7 +25,7 @@ lualine.setup({
 				sections = { "error", "warn" },
 			},
 		},
-		lualine_z = { "hostname" },
+		lualine_z = { "location" },
 	},
 	-- inactive_sections = {
 	-- 	lualine_a = {},
