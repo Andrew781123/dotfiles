@@ -39,11 +39,11 @@ local on_attach = function(client, bufnr)
 		keymap.set("n", "<leader>oi", ":OrganizeImports<CR>") -- organize imports (not in youtube nvim video)
 		keymap.set("n", "<leader>ri", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
 
-		-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-		-- 	callback = function()
-		-- 		vim.cmd(":TypescriptRemoveUnused")
-		-- 	end,
-		-- })
+		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+			callback = function()
+				vim.cmd("normal! :++nested OrganizeImports")
+			end,
+		})
 	end
 end
 
@@ -74,14 +74,19 @@ local function organize_imports()
 end
 
 lspconfig["tsserver"].setup({
+	init_options = {
+		preferences = {
+			importModuleSpecifierPreference = "non-relative",
+		},
+	},
 	capabilities = capabilities,
 	on_attach = on_attach,
-	-- commands = {
-	-- 	OrganizeImports = {
-	-- 		organize_imports,
-	-- 		description = "Organize Imports",
-	-- 	},
-	-- },
+	commands = {
+		OrganizeImports = {
+			organize_imports,
+			description = "Organize Imports",
+		},
+	},
 })
 
 -- configure css server
