@@ -13,6 +13,19 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- configure nvim-tree
 nvimtree.setup({
+	renderer = {
+		icons = {
+			glyphs = {
+				folder = {
+					arrow_closed = "",
+					arrow_open = "",
+				},
+			},
+		},
+	},
+	view = {
+		width = 100,
+	},
 	update_focused_file = {
 		enable = true,
 	},
@@ -26,9 +39,9 @@ nvimtree.setup({
 			},
 		},
 	},
-	-- 	git = {
-	-- 		ignore = false,
-	-- 	},
+	git = {
+		ignore = false,
+	},
 })
 
 -- open nvim-tree on setup
