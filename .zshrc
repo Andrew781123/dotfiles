@@ -70,6 +70,12 @@ alias ll="exa -alh"
 alias tree="exa -tree"
 alias cat="bat"
 
+# tmux
+alias tas="tmux attach-session -t"
+alias tns="tmux new -s" 
+alias tks="tmux kill-session -t"
+alias tls="tmux ls"
+
 # export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Load ; should be last.
