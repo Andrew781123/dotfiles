@@ -16,3 +16,19 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
 keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
+
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
+-- greatest remap ever
+keymap.set("x", "<leader>p", [["_dP]])
+
+keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- keymap.del("n", "<C-n>")
+-- keymap.del("n", "<C-p>")
+
+keymap.set("n", "<leader>mp", ":silent !prettier --stdin-filepath %<CR>", { silent = true })

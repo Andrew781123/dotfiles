@@ -5,4 +5,7 @@
 local opt = vim.opt
 opt.wrap = true
 
+opt.hlsearch = false
+opt.incsearch = true
+
 vim.g.copilot_assume_mapped = true
