@@ -32,3 +32,11 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 -- keymap.del("n", "<C-p>")
 
 keymap.set("n", "<leader>mp", ":silent !prettier --stdin-filepath %<CR>", { silent = true })
+
+keymap.set("i", "<Tab>", function()
+  if require("copilot.suggestion").is_visible() then
+    require("copilot.suggestion").accept()
+  else
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+  end
+end, { desc = "Super Tab" })
