@@ -10,7 +10,7 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = {
-          { "filename", path = 3 },
+          { "filename" },
           {
             "diff",
             symbols = {

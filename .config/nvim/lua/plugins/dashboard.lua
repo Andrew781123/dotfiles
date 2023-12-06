@@ -4,7 +4,7 @@ return {
   opts = function(_, opts)
     return {
       hide = {
-        statusline = true,
+        statusline = false,
       },
       config = {
         week_header = {
