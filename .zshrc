@@ -76,6 +76,9 @@ alias tns="tmux new -s"
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 
+# git
+alias grhs="git reset --soft"
+
 # export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Load ; should be last.
@@ -110,3 +113,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/.p10k.zsh.
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+
+PATH=~/.console-ninja/.bin:$PATH

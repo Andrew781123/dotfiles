@@ -1,6 +1,12 @@
 return {
   "hrsh7th/nvim-cmp",
   opts = function(_, opts)
+    local format_kinds = opts.formatting.format
+    opts.formatting.format = function(entry, item)
+      format_kinds(entry, item) -- add icons
+      return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+    end
+
     local cmp = require("cmp")
     opts.completion = {
       completeopt = "menu,menuone,noinsert,noselect",
@@ -22,6 +28,22 @@ return {
         cmp.abort()
         fallback()
       end,
+      -- ["<Tab>"] = cmp.mapping(function(fallback)
+      --   if require("copilot.suggestion").is_visible() then
+      --     require("copilot.suggestion").accept()
+      --   elseif cmp.visible() then
+      --     cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+      --   elseif luasnip.expandable() then
+      --     luasnip.expand()
+      --   elseif has_words_before() then
+      --     cmp.complete()
+      --   else
+      --     fallback()
+      --   end
+      -- end, {
+      --   "i",
+      --   "s",
+      -- }),
     })
   end,
 }
