@@ -4,17 +4,21 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     opts = {
+      panel = {
+        enabled = false,
+        -- auto_refresh = false,
+        -- keymap = {
+        --   accept = "<CR>",
+        --   jump_prev = "[[",
+        --   jump_next = "]]",
+        --   refresh = "gr",
+        --   open = "<M-CR>",
+        -- },
+      },
       suggestion = {
-        enabled = true,
-        auto_trigger = true,
-        debounce = 75,
-        keymap = {
-          accept = false,
-          accept_word = false,
-          accept_line = false,
-          next = "<C-]>",
-          prev = "<C-[>",
-        },
+        enabled = false,
+        -- auto_trigger = true,
+        -- debounce = 75,
       },
       filetypes = {
         typescript = true,
