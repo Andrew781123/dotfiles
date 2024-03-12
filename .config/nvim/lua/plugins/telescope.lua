@@ -16,7 +16,7 @@ return {
       },
     }
   end,
-  keys = function()
+  keys = function(event)
     local Util = require("lazyvim.util")
 
     return {
@@ -32,6 +32,21 @@ return {
       { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
       { "<leader>gt", Util.telescope("lsp_type_definitions"), desc = "Go to type definition" },
       -- others
+      -- Fuzzy find all the symbols in your current document.
+      { "<leader>ds", require("telescope.builtin").lsp_document_symbols, desc = "Document Symbols" },
+      -- Fuzzy find all the symbols in your current workspace
+      { "<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, desc = "Workspace Symbols" },
+      {
+        "<leader>/",
+        function()
+          -- You can pass additional configuration to telescope to change theme, layout, etc.
+          require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+            winblend = 10,
+            previewer = false,
+          }))
+        end,
+        desc = "[/] Fuzzily search in current buffer",
+      },
       { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
     }
   end,
