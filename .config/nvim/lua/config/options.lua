@@ -8,3 +8,5 @@ opt.wrap = true
 opt.hlsearch = false
 opt.incsearch = true
 opt.autoread = true
+opt.relativenumber = true
+vim.diagnostic.config({ virtual_text = false })

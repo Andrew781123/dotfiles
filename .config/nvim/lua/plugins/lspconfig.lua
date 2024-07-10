@@ -12,63 +12,19 @@ return {
     }
   end,
   opts = {
-    servers = {
-      tailwindcss = {
-        filetypes_exclude = { "markdown" },
-      },
-      tsserver = {
-        keys = {
-          {
-            "<leader>co",
-            function()
-              vim.lsp.buf.code_action({
-                apply = true,
-                context = {
-                  only = { "source.organizeImports.ts" },
-                  diagnostics = {},
-                },
-              })
-            end,
-            desc = "Organize Imports",
-          },
-          {
-            "<leader>cR",
-            function()
-              vim.lsp.buf.code_action({
-                apply = true,
-                context = {
-                  only = { "source.removeUnused.ts" },
-                  diagnostics = {},
-                },
-              })
-            end,
-            desc = "Remove Unused Imports",
-          },
-        },
-        init_options = {
-          preferences = {
-            importModuleSpecifierPreference = "non-relative",
-          },
-        },
-      },
+    inlay_hints = {
+      enabled = false,
     },
-    setup = {
-      tailwindcss = function(_, opts)
-        local tw = require("lspconfig.server_configurations.tailwindcss")
-        opts.filetypes = opts.filetypes or {}
-
-        -- Add default filetypes
-        vim.list_extend(opts.filetypes, tw.default_config.filetypes)
-
-        -- Remove excluded filetypes
-        --- @param ft string
-        opts.filetypes = vim.tbl_filter(function(ft)
-          return not vim.tbl_contains(opts.filetypes_exclude or {}, ft)
-        end, opts.filetypes)
-
-        -- Add additional filetypes
-        vim.list_extend(opts.filetypes, opts.filetypes_include or {})
-      end,
+    servers = {
+      vtsls = {
+        settings = {
+          typescript = {
+            preferences = {
+              importModuleSpecifier = "non-relative",
+            },
+          },
+        },
+      },
     },
   },
 }

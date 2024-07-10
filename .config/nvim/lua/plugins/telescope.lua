@@ -1,9 +1,11 @@
 return {
   "nvim-telescope/telescope.nvim",
+  commit = "29fddf76bc3b75224f8a974f15139627ffb435d5",
   opts = function()
     local actions = require("telescope.actions")
     return {
       defaults = {
+        file_ignore_patterns = { "node_modules", "generated" },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -20,17 +22,17 @@ return {
     local Util = require("lazyvim.util")
 
     return {
-      { "<leader>fS", Util.telescope("live_grep"), desc = "Grep (root dir)" },
-      { "<leader>fs", Util.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
+      { "<leader>fS", Util.pick("live_grep"), desc = "Grep (root dir)" },
+      { "<leader>fs", Util.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
       { "<leader>rff", "<cmd>Telescope resume<cr>", desc = "Resume" },
-      { "<leader>fF", Util.telescope("files"), desc = "Find Files (root dir)" },
-      { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
-      { "<leader>fw", Util.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
-      { "<leader>fr", Util.telescope("lsp_references"), desc = "Word (root dir)" },
+      { "<leader>fF", Util.pick("files"), desc = "Find Files (root dir)" },
+      { "<leader>ff", Util.pick("files", { root = false }), desc = "Find Files (cwd)" },
+      { "<leader>fw", Util.pick("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
+      { "<leader>fr", Util.pick("lsp_references"), desc = "Find Reference (root dir)" },
       -- git
       { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
       { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
-      { "<leader>gt", Util.telescope("lsp_type_definitions"), desc = "Go to type definition" },
+      { "<leader>gt", Util.pick("lsp_type_definitions"), desc = "Go to type definition" },
       -- others
       -- Fuzzy find all the symbols in your current document.
       { "<leader>ds", require("telescope.builtin").lsp_document_symbols, desc = "Document Symbols" },
@@ -47,7 +49,7 @@ return {
         end,
         desc = "[/] Fuzzily search in current buffer",
       },
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>uC", Util.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
     }
   end,
 }

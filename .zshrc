@@ -115,3 +115,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/andrew/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
