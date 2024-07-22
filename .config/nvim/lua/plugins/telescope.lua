@@ -4,8 +4,13 @@ return {
   opts = function()
     local actions = require("telescope.actions")
     return {
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
+      },
       defaults = {
-        file_ignore_patterns = { "node_modules", "generated" },
+        file_ignore_patterns = { "node_modules", "generated", ".git" },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -25,8 +30,8 @@ return {
       { "<leader>fS", Util.pick("live_grep"), desc = "Grep (root dir)" },
       { "<leader>fs", Util.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
       { "<leader>rff", "<cmd>Telescope resume<cr>", desc = "Resume" },
-      { "<leader>fF", Util.pick("files"), desc = "Find Files (root dir)" },
-      { "<leader>ff", Util.pick("files", { root = false }), desc = "Find Files (cwd)" },
+      { "<leader>fF", Util.pick("files", { hidden = true }), desc = "Find Files (root dir)" },
+      { "<leader>ff", Util.pick("files", { root = false, hidden = true }), desc = "Find Files (cwd)" },
       { "<leader>fw", Util.pick("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
       { "<leader>fr", Util.pick("lsp_references"), desc = "Find Reference (root dir)" },
       -- git
