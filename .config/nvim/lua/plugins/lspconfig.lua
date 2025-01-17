@@ -1,3 +1,11 @@
+-- https://github.com/27medkamal/LazyVim/blob/391a6f97b51c24cdf2355f75d5180d016017c532/lua/lazyvim/plugins/extras/linting/eslint.lua
+if lazyvim_docs then
+  -- Set to false to disable auto format
+  vim.g.lazyvim_eslint_auto_format = true
+end
+
+local auto_format = vim.g.lazyvim_eslint_auto_format == nil or vim.g.lazyvim_eslint_auto_format
+
 return {
   "neovim/nvim-lspconfig",
   init = function()
@@ -25,6 +33,13 @@ return {
           },
         },
       },
+    },
+    setup = {
+      eslint = function()
+        if not auto_format then
+          return
+        end
+      end,
     },
   },
 }

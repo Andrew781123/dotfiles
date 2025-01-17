@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  commit = "29fddf76bc3b75224f8a974f15139627ffb435d5",
+  -- commit = "29fddf76bc3b75224f8a974f15139627ffb435d5",
   opts = function()
     local actions = require("telescope.actions")
     return {

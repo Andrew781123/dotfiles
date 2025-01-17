@@ -10,3 +10,7 @@ opt.incsearch = true
 opt.autoread = true
 opt.relativenumber = true
 vim.diagnostic.config({ virtual_text = false })
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldmethod = "expr"
+opt.spell = true
+opt.spelloptions:append("camel")

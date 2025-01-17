@@ -30,9 +30,7 @@ return {
             end,
           },
         },
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {
+        lualine_c = {
           {
             "diagnostics",
             always_visible = true,
@@ -40,6 +38,8 @@ return {
             sections = { "error", "warn" },
           },
         },
+        lualine_x = {},
+        lualine_y = {},
         lualine_z = { "location" },
       },
     }

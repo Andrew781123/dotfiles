@@ -23,6 +23,8 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
+keymap.set("n", "zf", "za", { noremap = true, silent = true })
+
 -- greatest remap ever
 keymap.set("x", "<leader>p", [["_dP]])
 
