@@ -1,14 +1,25 @@
 return {
   "saghen/blink.cmp",
   opts = function(_, opts)
+    opts.signature = { enabled = true }
     opts.keymap = {
       ["<C-j>"] = { "select_next", "fallback" },
       ["<C-k>"] = { "select_prev", "fallback" },
       ["<C-n>"] = { "show", "show_documentation", "hide_documentation" },
       ["<CR>"] = { "accept", "fallback" },
     }
+    opts.completion = {
+      menu = {
+        auto_show = function(ctx)
+          return ctx.mode ~= "cmdline"
+        end,
+        draw = {
+          columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
+        },
+      },
+    }
     opts.sources = {
-      default = { "lsp", "path", "snippets", "buffer", "copilot" },
+      default = { "lsp", "path", "snippets", "copilot" },
       providers = {
         copilot = {
           name = "copilot",

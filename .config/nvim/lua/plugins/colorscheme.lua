@@ -1,17 +1,21 @@
 return {
   {
-    "rose-pine/neovim",
-    lazy = true,
-    name = "rose-pine",
-  },
-  { "ellisonleao/gruvbox.nvim", lazy = true },
-  {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
     opts = {
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
       no_bold = true,
       no_italic = true,
+      integrations = {
+        blink_cmp = true,
+        harpoon = true,
+        snacks = true,
+        mason = true,
+        nvim_surround = true,
+        which_key = true,
+        lsp_trouble = true,
+      },
     },
   },
   {

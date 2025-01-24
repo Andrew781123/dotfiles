@@ -14,16 +14,8 @@ return {
     "folke/noice.nvim",
     enabled = false,
   },
-  {
-    "rafamadriz/friendly-snippets",
-    enabled = false,
-  },
   -- {
-  --   "nvim-tree/nvim-web-devicons",
-  --   enabled = false,
-  -- },
-  -- {
-  --   "nvimdev/dashboard-nvim",
+  --   "rafamadriz/friendly-snippets",
   --   enabled = false,
   -- },
 }
