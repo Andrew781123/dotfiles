@@ -8,6 +8,10 @@ return {
         hide_gitignored = false,
       },
     },
+    default_component_configs = {
+      expander_collapsed = "›",
+      expander_expanded = "‹",
+    },
   },
   keys = {
     {
