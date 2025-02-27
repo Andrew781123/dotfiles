@@ -25,6 +25,15 @@ keymap.set("n", "N", "Nzzzv")
 
 keymap.set("n", "zf", "za", { noremap = true, silent = true })
 
+keymap.set("t", "<leader>N", "<C-\\><C-N>", { noremap = true, silent = true })
+----
+--vim.api.nvim_create_autocmd("TermOpen", {
+--  pattern = "*",
+--  callback = function()
+--    vim.keymap.set("t", "<Esc>", "<C-\\><C-N>", { noremap = true, silent = true, buffer = 0 })
+--  end,
+--})
+
 -- greatest remap ever
 keymap.set("x", "<leader>p", [["_dP]])
 
@@ -42,3 +51,24 @@ keymap.set("i", "<Tab>", function()
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
   end
 end, { desc = "Super Tab" })
+
+-- Terminal toggle keybinding
+keymap.set("n", "<leader>t", function()
+  if vim.bo.buftype == "terminal" then
+    vim.cmd("hide")
+  else
+    -- Find the most recent terminal buffer and open it in a vsplit
+    local term_buf = nil
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      if vim.bo[buf].buftype == "terminal" and vim.fn.bufloaded(buf) == 1 then
+        term_buf = buf
+        break
+      end
+    end
+    if term_buf then
+      vim.cmd("vsplit | buffer " .. term_buf)
+    else
+      vim.cmd("vsplit | terminal")
+    end
+  end
+end, { noremap = true, silent = true, desc = "Toggle terminal" })

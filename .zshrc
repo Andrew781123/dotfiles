@@ -1,9 +1,8 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
-export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+export ZSH="$HOME/.oh-my-zsh"
 plugins=(git)
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -123,3 +122,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# aider
+export DEEPSEEK_API_KEY="sk-bb2f577b357f4264a8fdc954e25c85c8"
+export AIDER_NO_AUTO_COMMITS=1
+export AIDER_CODE_THEME="nord-darker"
+export AIDER_DEEPSEEK=1
+export AIDER_VIM=1
+export AIDER_WATCH_FILES=1
