@@ -70,6 +70,7 @@ fi
 unset __conda_setup
 
 # Aider configuration
+# ai how to make the api key secure, I'm using macos
 export DEEPSEEK_API_KEY="sk-bb2f577b357f4264a8fdc954e25c85c8"
 export AIDER_NO_AUTO_COMMITS=1
 export AIDER_CODE_THEME="nord-darker"
