@@ -41,6 +41,14 @@ alias tls="tmux ls"
 alias grhs="git reset --soft"
 eval $(thefuck --alias)
 
+# Extended git aliases with no-verify
+alias gcmsg="git commit --no-verify -m"
+alias gpsup="git push --no-verify --set-upstream origin"
+alias gp="git push --no-verify"
+alias ggfl="git push --no-verify --force-with-lease"
+alias ggf="git push --no-verify --force"
+alias gcn!="git commit --no-verify --no-edit --amend"
+
 # Plugin management
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
