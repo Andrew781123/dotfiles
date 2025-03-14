@@ -38,16 +38,16 @@ alias tas="tmux attach-session -t"
 alias tns="tmux new -s"
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
-alias grhs="git reset --soft"
 eval $(thefuck --alias)
 
 # Extended git aliases with no-verify
 alias gcmsg="git commit --no-verify -m"
-alias gpsup="git push --no-verify --set-upstream origin"
+alias gpsup='git push --no-verify --set-upstream origin $(git_current_branch)'
 alias gp="git push --no-verify"
 alias ggfl="git push --no-verify --force-with-lease"
 alias ggf="git push --no-verify --force"
 alias gcn!="git commit --no-verify --no-edit --amend"
+alias grhs="git reset --soft HEAD~"
 
 # Plugin management
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -83,7 +83,6 @@ export AIDER_NO_AUTO_COMMITS=1
 export AIDER_CODE_THEME="nord-darker"
 export AIDER_DEEPSEEK=1
 export AIDER_VIM=1
-export AIDER_WATCH_FILES=1
 
 # Load p10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

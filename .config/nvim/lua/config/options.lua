@@ -12,5 +12,12 @@ opt.relativenumber = true
 vim.diagnostic.config({ virtual_text = false })
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldmethod = "expr"
+
 opt.spell = true
-opt.spelloptions:append("camel")
+opt.spelllang = "en_us"
+opt.spelloptions = "camel"
+
+vim.g.moonflyCursorColor = true
+vim.g.moonflyItalics = true
+vim.g.moonflyTransparent = true
+opt.termguicolors = true

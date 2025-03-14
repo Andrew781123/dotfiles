@@ -40,7 +40,7 @@ return {
         },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { "location" },
+        lualine_z = {},
       },
     }
   end,
