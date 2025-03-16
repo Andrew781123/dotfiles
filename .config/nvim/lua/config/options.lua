@@ -20,4 +20,5 @@ opt.spelloptions = "camel"
 vim.g.moonflyCursorColor = true
 vim.g.moonflyItalics = true
 vim.g.moonflyTransparent = true
+vim.g.moonflyVirtualTextColor = true
 opt.termguicolors = true
