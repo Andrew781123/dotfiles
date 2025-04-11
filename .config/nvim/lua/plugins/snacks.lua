@@ -43,5 +43,15 @@ return {
     scope = { enabled = false },
     dim = { enabled = false },
     zen = { enabled = false },
+
+    keys = {
+      {
+        "<leader>U",
+        function()
+          Snacks.picker.undo()
+        end,
+        desc = "Undo History",
+      },
+    },
   },
 }

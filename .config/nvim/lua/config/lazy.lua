@@ -7,6 +7,23 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
+  {
+    "nvim-lspconfig",
+    cond = true, -- Keep LSP enabled
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    cond = true, -- Keep Neo-tree enabled
+  },
+  {
+    "folke/flash.nvim",
+    cond = true, -- Keep Blink enabled
+  },
+  {
+    "junegunn/fzf.vim",
+    cond = true, -- Keep FZF enabled
+  },
+  { import = "plugins" }, -- Disable all other plugins
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },

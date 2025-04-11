@@ -1,5 +1,6 @@
 return {
   "joshuavial/aider.nvim",
+  enabled = false,
   opts = {
     -- your configuration comes here
     -- if you don't want to use the default settings

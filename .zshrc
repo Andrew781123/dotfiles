@@ -30,7 +30,7 @@ compinit
 _comp_options+=(globdots)
 
 # Aliases
-alias ls="exa"
+# alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa -tree"
 alias cat="bat"
@@ -38,6 +38,8 @@ alias tas="tmux attach-session -t"
 alias tns="tmux new -s"
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
+alias z="zoxide"
+alias y="yazi"
 eval $(thefuck --alias)
 
 # Extended git aliases with no-verify
@@ -87,3 +89,5 @@ export AIDER_VIM=1
 # Load p10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+PATH=~/.console-ninja/.bin:$PATH

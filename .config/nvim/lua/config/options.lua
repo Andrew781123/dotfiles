@@ -17,6 +17,15 @@ opt.spell = true
 opt.spelllang = "en_us"
 opt.spelloptions = "camel"
 
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+
+opt.scrolloff = 8
+
+vim.fn.setreg("l", 'yoconsole.log({"^[p^[lli: ^[p^[A;^[hhi, q<80>kb^[')
+
 vim.g.moonflyCursorColor = true
 vim.g.moonflyItalics = true
 vim.g.moonflyTransparent = true

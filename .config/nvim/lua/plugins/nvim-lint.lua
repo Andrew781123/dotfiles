@@ -1,5 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
+  enabled = false,
   optional = true,
   opts = {
     linters_by_ft = {
