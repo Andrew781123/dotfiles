@@ -3,6 +3,7 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
+    enabled = false,
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       no_bold = true,

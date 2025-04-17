@@ -31,3 +31,5 @@ vim.g.moonflyItalics = true
 vim.g.moonflyTransparent = true
 vim.g.moonflyVirtualTextColor = true
 opt.termguicolors = true
+
+vim.lsp.set_log_level("off")
