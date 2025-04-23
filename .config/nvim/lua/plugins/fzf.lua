@@ -50,5 +50,19 @@ return {
     { "<leader>fF", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
     { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
     { "<leader>rff", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+    {
+      "<leader>gb",
+      function()
+        require("fzf-lua").git_branches({
+          cmd = "git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)'",
+          actions = {
+            ["default"] = function(selected)
+              vim.cmd("Git checkout " .. selected[1])
+            end,
+          },
+        })
+      end,
+      desc = "Checkout Git branch (sorted by recent commit)",
+    },
   },
 }
