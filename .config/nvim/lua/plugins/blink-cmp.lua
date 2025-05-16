@@ -17,9 +17,20 @@ return {
           columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
         },
       },
+      accept = {
+        auto_brackets = {
+          enabled = false,
+          kind_resolution = {
+            enabled = false,
+          },
+          semantic_token_resolution = {
+            enabled = false,
+          },
+        },
+      },
     }
     opts.sources = {
-      default = { "lsp", "path" },
+      default = { "lsp", "path", "snippets" },
       compat = { "supermaven" },
       providers = {
         supermaven = {
@@ -29,10 +40,6 @@ return {
         },
       },
     }
-
-    -- opts.completion = {
-    --   debounce_delay = 20,
-    -- }
 
     opts.appearance = {
       -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot

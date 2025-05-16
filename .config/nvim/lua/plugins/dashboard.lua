@@ -1,7 +1,6 @@
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
-  enabled = false,
   opts = {
     theme = "hyper",
     hide = { statusline = false },
@@ -13,5 +12,4 @@ return {
       },
     },
   },
-  dependencies = { "nvim-tree/nvim-web-devicons" },
 }

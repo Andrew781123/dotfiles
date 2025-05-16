@@ -17,6 +17,6 @@ return {
       fish = { "fish_indent" },
       sh = { "shfmt" },
     }
-    opts.format = { timeout_ms = 10000 }
+    opts.default_format_opts = { timeout_ms = 10000 }
   end,
 }

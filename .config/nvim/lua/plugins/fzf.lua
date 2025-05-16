@@ -44,6 +44,13 @@ return {
           },
         })
       end,
+      winopts = {
+        preview = {
+          wrap = true,
+          horizontal = "right:50%",
+          flip_columns = 200,
+        },
+      },
     }
   end,
   keys = {

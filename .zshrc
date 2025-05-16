@@ -86,6 +86,8 @@ export AIDER_CODE_THEME="nord-darker"
 export AIDER_DEEPSEEK=1
 export AIDER_VIM=1
 
+export EDITOR='nvim'
+
 # Load p10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet

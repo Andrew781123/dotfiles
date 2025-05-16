@@ -50,6 +50,7 @@ return {
             preferences = {
               importModuleSpecifier = "non-relative",
               includePackageJsonAutoImports = "off",
+              -- useAliasesForRenames = false,
             },
             tsserver = {
               disableAutomaticTypingAcquisition = true, -- Skip fetching type defs for unused packages
@@ -71,6 +72,16 @@ return {
           workingDirectories = { mode = "auto" },
           format = auto_format,
         },
+      },
+      typos_lsp = {
+        init_options = {
+          diagnosticSeverity = "Error",
+        },
+        filetypes = { "*" },
+        on_attach = function(client, bufnr)
+          -- Tell typos-lsp that everything is just text
+          client.server_capabilities.semanticTokensProvider = nil
+        end,
       },
     }
 
