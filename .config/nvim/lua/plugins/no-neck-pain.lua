@@ -7,6 +7,8 @@ return {
       width = 130,
       ---@type table
       autocmds = {
+        skipEnteringNoNeckPainBuffer = true,
+
         -- When `true`, enables the plugin when you start Neovim.
         -- If the main window is  a side tree (e.g. NvimTree) or a dashboard, the command is delayed until it finds a valid window.
         -- The command is cleaned once it has successfuly ran once.
