@@ -55,7 +55,13 @@ return {
   end,
   keys = {
     { "<leader>fF", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-    { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+    {
+      "<leader>ff",
+      function()
+        require("fzf-lua").files({ cmd = "echo .env && fd --type f --hidden", hidden = true })
+      end,
+      desc = "Find Files (cwd, custom cmd)",
+    },
     { "<leader>rff", "<cmd>FzfLua resume<cr>", desc = "Resume" },
     {
       "<leader>gb",
