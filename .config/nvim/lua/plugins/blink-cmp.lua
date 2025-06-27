@@ -1,5 +1,7 @@
 return {
   "saghen/blink.cmp",
+  lazy = true,
+  dependencies = { "saghen/blink.compat" },
   opts = function(_, opts)
     opts.signature = { enabled = true }
     opts.keymap = {
@@ -30,9 +32,27 @@ return {
       },
     }
     opts.sources = {
-      default = { "lsp", "path", "snippets" },
-      compat = { "supermaven" },
+      default = { "avante_commands", "avante_mentions", "avante_files", "lsp", "path", "snippets" },
+      compat = { "avante_commands", "avante_mentions", "avante_files", "supermaven" },
       providers = {
+        avante_commands = {
+          name = "avante_commands",
+          module = "blink.compat.source",
+          score_offset = 90,
+          opts = {},
+        },
+        avante_files = {
+          name = "avante_files",
+          module = "blink.compat.source",
+          score_offset = 100,
+          opts = {},
+        },
+        avante_mentions = {
+          name = "avante_mentions",
+          module = "blink.compat.source",
+          score_offset = 1000,
+          opts = {},
+        },
         supermaven = {
           kind = "Supermaven",
           score_offset = 100,
@@ -40,33 +60,26 @@ return {
         },
       },
     }
-
     opts.appearance = {
-      -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
       kind_icons = {
         Copilot = "",
         Text = "󰉿",
         Method = "󰊕",
         Function = "󰊕",
         Constructor = "󰒓",
-
         Field = "󰜢",
         Variable = "󰆦",
         Property = "󰖷",
-
         Class = "󱡠",
         Interface = "󱡠",
         Struct = "󱡠",
         Module = "󰅩",
-
         Unit = "󰪚",
         Value = "󰦨",
         Enum = "󰦨",
         EnumMember = "󰦨",
-
         Keyword = "󰻾",
         Constant = "󰏿",
-
         Snippet = "󱄽",
         Color = "󰏘",
         File = "󰈔",

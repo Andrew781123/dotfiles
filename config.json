@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "provider": "azure",
+  "providers": {
+    "azure": {
+      "name": "AzureOpenAI",
+      "baseURL": "https://andrewmakeapp1123.cognitiveservices.azure.com/openai",
+      "envKey": "AZURE_OPENAI_API_KEY"
+    }
+  },
+  "history": {
+    "maxSize": 1000,
+    "saveHistory": true,
+    "sensitivePatterns": []
+  }
+}

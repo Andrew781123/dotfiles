@@ -24,7 +24,7 @@ opt.undofile = true
 
 opt.scrolloff = 8
 
-vim.fn.setreg("l", 'yoconsole.log({"^[p^[lli: ^[p^[A;^[hhi, q<80>kb^[')
+
 
 vim.g.moonflyCursorColor = true
 vim.g.moonflyItalics = true

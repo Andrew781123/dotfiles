@@ -16,7 +16,17 @@ return {
       lua = { "stylua" },
       fish = { "fish_indent" },
       sh = { "shfmt" },
+      prisma = { "prisma_format" },
     }
+
+    opts.formatters = {
+      prisma_format = {
+        command = "npx",
+        args = { "prisma", "format", "--schema", "$FILENAME" },
+        stdin = false,
+      },
+    }
+
     opts.default_format_opts = { timeout_ms = 10000 }
   end,
 }
