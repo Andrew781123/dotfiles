@@ -34,7 +34,11 @@ return {
     opts.sources = {
       default = { "avante_commands", "avante_mentions", "avante_files", "lsp", "path", "snippets" },
       compat = { "avante_commands", "avante_mentions", "avante_files", "supermaven" },
+      per_filetype = {
+        sql = { "snippets", "dadbod", "buffer" },
+      },
       providers = {
+        dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
         avante_commands = {
           name = "avante_commands",
           module = "blink.compat.source",

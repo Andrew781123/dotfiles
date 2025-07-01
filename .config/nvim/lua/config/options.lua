@@ -19,7 +19,7 @@ opt.foldmethod = "expr"
 
 opt.swapfile = false
 opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 opt.undofile = true
 
 opt.scrolloff = 8

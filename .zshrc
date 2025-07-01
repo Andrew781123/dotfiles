@@ -94,7 +94,7 @@ export AZURE_API_BASE=https://andrewmakeapp1123.openai.azure.com/
 # Avante configuration
 export AZURE_OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w 2>/dev/null)
 export OPENROUTER_API_KEY=$(security find-generic-password -s "OPENROUTER_API_KEY" -w)
-# export GEMINI_API_KEY=$(security find-generic-password -s "GEMINI_API_KEY" -w)
+export GEMINI_API_KEY=$(security find-generic-password -s "GEMINI_API_KEY" -w)
 export OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w)
 export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
 
