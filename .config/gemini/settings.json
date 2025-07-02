@@ -1,6 +1,8 @@
 {
   "theme": "GitHub",
   "selectedAuthType": "gemini-api-key",
+  "preferredEditor": "vim",
+  "default_model": "gemini-2.5-pro-latest",
   "mcpServers": {
     "context7": {
       "command": "npx",
