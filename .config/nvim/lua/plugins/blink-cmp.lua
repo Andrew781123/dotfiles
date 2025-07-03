@@ -36,6 +36,7 @@ return {
       compat = { "avante_commands", "avante_mentions", "avante_files", "supermaven" },
       per_filetype = {
         sql = { "snippets", "dadbod", "buffer" },
+        mysql = { "snippets", "dadbod", "buffer" },
       },
       providers = {
         dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },

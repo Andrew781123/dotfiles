@@ -97,6 +97,7 @@ export OPENROUTER_API_KEY=$(security find-generic-password -s "OPENROUTER_API_KE
 export GEMINI_API_KEY=$(security find-generic-password -s "GEMINI_API_KEY" -w)
 export OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w)
 export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
+export LINEAR_API_KEY=$(security find-generic-password -s "LINEAR_API_KEY" -w)
 
 export EDITOR='nvim'
 
@@ -105,3 +106,4 @@ export EDITOR='nvim'
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 PATH=~/.console-ninja/.bin:$PATH
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"

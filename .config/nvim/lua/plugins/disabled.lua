@@ -15,6 +15,10 @@ return {
     enabled = false,
   },
   -- {
+  --   "nvim-lua/plenary.nvim",
+  --   enabled = false,
+  -- },
+  -- {
   --   "rafamadriz/friendly-snippets",
   --   enabled = false,
   -- },

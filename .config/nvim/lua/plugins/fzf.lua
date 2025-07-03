@@ -62,6 +62,8 @@ return {
       end,
       desc = "Find Files (cwd, custom cmd)",
     },
+    { "<leader>fS", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
+    { "<leader>fs", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
     { "<leader>rff", "<cmd>FzfLua resume<cr>", desc = "Resume" },
     {
       "<leader>gb",

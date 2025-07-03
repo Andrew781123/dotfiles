@@ -1,12 +1,19 @@
 {
   "theme": "GitHub",
   "selectedAuthType": "gemini-api-key",
-  "preferredEditor": "vim",
+  "preferredEditor": "neovim",
   "default_model": "gemini-2.5-pro-latest",
   "mcpServers": {
     "context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "linear": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "linear-mcp-server"
+      ]
     }
   }
 }

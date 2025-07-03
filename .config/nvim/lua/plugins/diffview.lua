@@ -1,9 +1,9 @@
 return {
   "sindrets/diffview.nvim",
   keys = {
-    { "<leader>do", ":DiffviewOpen ", desc = "Diffview Open" },
-    { "<leader>dc", ":DiffviewClose <CR>", desc = "Diffview Close" },
-    { "<leader>dh", ":DiffviewFileHistory % <CR>", desc = "Diffview History (File)" },
-    { "<leader>dH", ":DiffviewFileHistory <CR>", desc = "Diffview History (Branch)" },
+    { "<leader>dvo", ":DiffviewOpen ", desc = "Diffview Open" },
+    { "<leader>dvc", ":DiffviewClose <CR>", desc = "Diffview Close" },
+    { "<leader>dvh", ":DiffviewFileHistory % <CR>", desc = "Diffview History (File)" },
+    { "<leader>dvH", ":DiffviewFileHistory <CR>", desc = "Diffview History (Branch)" },
   },
 }

@@ -5,6 +5,7 @@ return {
     "sindrets/diffview.nvim",
   },
   opts = {
+    auto_refresh = false,
     integrations = {
       diffview = true,
     },

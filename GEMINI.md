@@ -1,0 +1,1 @@
+- The user is using the LazyVim distro and prefers to use its specific configuration syntax, such as the `keys` table for key mappings.

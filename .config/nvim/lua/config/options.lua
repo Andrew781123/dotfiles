@@ -24,8 +24,6 @@ opt.undofile = true
 
 opt.scrolloff = 8
 
-
-
 vim.g.moonflyCursorColor = true
 vim.g.moonflyItalics = true
 vim.g.moonflyTransparent = true
