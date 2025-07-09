@@ -1,6 +1,8 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+require("oil").setup()
+
 local should_profile = os.getenv("NVIM_PROFILE")
 if should_profile then
   require("profile").instrument_autocmds()
@@ -58,3 +60,8 @@ vim.api.nvim_set_hl(0, "DiffviewStatusModified", { fg = "#e3c78a", bold = true }
 vim.api.nvim_set_hl(0, "DiffviewStatusRenamed", { fg = "#8cc85f", bold = true }) -- green
 vim.api.nvim_set_hl(0, "DiffviewStatusDeleted", { fg = "#ff5d5d", bold = true }) -- red
 vim.api.nvim_set_hl(0, "DiffviewStatusIgnored", { fg = "#949494", bold = true }) -- gray
+
+vim.keymap.set("n", "<leader>fp", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+  print("Copied full path: " .. vim.fn.expand("%:p"))
+end, { noremap = true, silent = true, desc = "Copy Full Path" })

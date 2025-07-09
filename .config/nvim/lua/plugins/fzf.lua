@@ -45,10 +45,11 @@ return {
         })
       end,
       winopts = {
+        fullscreen = true,
         preview = {
           wrap = true,
           horizontal = "right:50%",
-          flip_columns = 200,
+          flip_columns = 100,
         },
       },
     }
