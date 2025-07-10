@@ -8,12 +8,16 @@
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
     },
-    "linear": {
+    "github": {
       "command": "npx",
       "args": [
         "-y",
-        "linear-mcp-server"
+        "@modelcontextprotocol/server-github"
       ]
+    },
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
     }
   }
 }
