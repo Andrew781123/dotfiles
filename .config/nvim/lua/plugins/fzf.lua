@@ -18,6 +18,7 @@ return {
         return vim.tbl_deep_extend("force", fzf_opts, {
           prompt = " ",
           winopts = {
+            fullscreen = false,
             title = " " .. vim.trim((fzf_opts.prompt or "Select"):gsub("%s*:%s*$", "")) .. " ",
             title_pos = "center",
           },

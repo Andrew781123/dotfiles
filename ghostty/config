@@ -2,6 +2,8 @@ font-family = "Fira Code"
 font-size = 16
 font-feature = -calt, -liga, -dlig
 
+mouse-hide-while-typing = true
+
 window-decoration = false
 
 background = #080808

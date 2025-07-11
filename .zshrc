@@ -98,6 +98,7 @@ export GEMINI_API_KEY=$(security find-generic-password -s "GEMINI_API_KEY" -w)
 export OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w)
 export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
 export LINEAR_API_KEY=$(security find-generic-password -s "LINEAR_API_KEY" -w)
+export GITHUB_ACCESS_TOKEN=$(security find-generic-password -s "GITHUB_ACCESS_TOKEN" -w)
 
 export EDITOR='nvim'
 
