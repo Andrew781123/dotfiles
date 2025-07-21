@@ -1,0 +1,3 @@
+-- Keymaps are automatically loaded on startup
+-- Add any keymaps here
+-- For more advanced keymap configuration, see `:help vim.keymap.set()`
