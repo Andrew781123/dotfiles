@@ -11,5 +11,5 @@ vim.g.maplocalleader = " "
 require("core.options")
 require("core.keymaps")
 
--- Load plugin manager
+-- Load plugin manager and setup plugins
 require("config.lazy")

@@ -4,14 +4,6 @@ local opt = vim.opt
 -- ┌────────────────────────────────────────────────────────────────────────┐
 -- │ Appearance                                                             │
 -- └────────────────────────────────────────────────────────────────────────┘
--- Set to true to have the moonfly theme handle cursor color
-vim.g.moonflyCursorColor = true
--- Enable italics for the moonfly theme
-vim.g.moonflyItalics = true
--- Enable transparent background for the moonfly theme
-vim.g.moonflyTransparent = true
--- Enable virtual text color for the moonfly theme
-vim.g.moonflyVirtualTextColor = true
 -- Enable 24-bit RGB color
 opt.termguicolors = true
 
@@ -166,9 +158,6 @@ vim.diagnostic.config({ virtual_text = false })
 vim.lsp.set_log_level("off")
 -- Set the recommended style for markdown
 vim.g.markdown_recommended_style = 0
--- This is a LazyVim-specific utility. You might need to implement your own
--- formatting function if you are not using LazyVim's utilities.
--- opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
 
 -- ┌────────────────────────────────────────────────────────────────────────┐
 -- │ Performance                                                            │

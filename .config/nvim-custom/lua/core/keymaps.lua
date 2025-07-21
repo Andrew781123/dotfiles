@@ -1,4 +1,4 @@
-local map = LazyVim.safe_keymap_set
+local map = vim.keymap.set
 local keymap = vim.keymap
 
 -- ┌────────────────────────────────────────────────────────────────────────┐
@@ -39,7 +39,7 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 -- └────────────────────────────────────────────────────────────────────────┘
 
 -- delete single character without copying into register
-keymap.set("n", "x", "\"_x")
+keymap.set("n", "x", '"_x')
 
 -- greatest remap ever
 keymap.set("x", "<leader>p", [["_dP]])
@@ -91,7 +91,6 @@ map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 -- Clear search and stop snippet on escape
 map({ "i", "n", "s" }, "<esc>", function()
 	vim.cmd("noh")
-	LazyVim.cmp.actions.snippet_stop()
 	return "<esc>"
 end, { expr = true, desc = "Escape and Clear hlsearch" })
 
