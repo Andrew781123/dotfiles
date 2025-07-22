@@ -1,6 +1,6 @@
 return {
 	"supermaven-inc/supermaven-nvim",
-	event = "InsertEnter",
+	lazy = false,
 	cmd = {
 		"SupermavenUseFree",
 		"SupermavenUsePro",

@@ -13,3 +13,4 @@ require("core.keymaps")
 
 -- Load plugin manager and setup plugins
 require("config.lazy")
+

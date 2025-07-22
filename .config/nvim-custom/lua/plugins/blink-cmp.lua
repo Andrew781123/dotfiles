@@ -1,8 +1,7 @@
 return {
 	"saghen/blink.cmp",
 	lazy = true,
-	dependencies = { "saghen/blink.compat", "supermaven-inc/supermaven-nvim" },
-	event = "InsertEnter",
+	dependencies = { "saghen/blink.compat", "supermaven-nvim" },
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
 	opts = {
@@ -14,15 +13,6 @@ return {
 				return require("luasnip").lsp_expand(snippet.body)
 			end,
 		},
-		appearance = {
-			-- sets the fallback highlight groups to nvim-cmp's highlight groups
-			-- useful for when your theme doesn't support blink.cmp
-			-- will be removed in a future release, assuming themes add support
-			use_nvim_cmp_as_default = false,
-			-- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-			-- adjusts spacing to ensure icons are aligned
-			nerd_font_variant = "mono",
-		},
 		completion = {
 			menu = {
 				auto_show = function(ctx)
@@ -31,9 +21,6 @@ return {
 				draw = {
 					columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
 					treesitter = { "lsp" },
-				},
-				auto_brackets = {
-					enabled = true,
 				},
 			},
 			accept = {
@@ -59,12 +46,11 @@ return {
 			-- adding any nvim-cmp sources here will enable them
 			-- with blink.compat
 			compat = { "supermaven" },
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "supermaven" },
 			providers = {
 				dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 				supermaven = {
 					kind = "Supermaven",
-					module = "supermaven-nvim",
 					score_offset = 100,
 					async = true,
 				},
@@ -85,6 +71,7 @@ return {
 		},
 
 		appearance = {
+			nerd_font_variant = "mono",
 			kind_icons = {
 				Copilot = "",
 				Text = "󰉿",

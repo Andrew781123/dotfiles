@@ -2,6 +2,7 @@ return {
 	require("plugins.aider"),
 	require("plugins.avante"),
 	require("plugins.blink-cmp"),
+	require("plugins.blink-compat"),
 	require("plugins.cmp"),
 	require("plugins.colorscheme"),
 	require("plugins.conform"),
@@ -29,4 +30,3 @@ return {
 	require("plugins.treesitter"),
 	require("plugins.yazi"),
 }
-
