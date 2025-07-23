@@ -6,39 +6,27 @@ return {
       options = {
         always_divide_middle = false,
         globalstatus = true,
+        section_separators = "",
+        component_separators = "",
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = {
-          { "filename" },
+        lualine_b = {},
+        lualine_c = {
           {
-            "diff",
-            symbols = {
-              added = icons.git.added,
-              modified = icons.git.modified,
-              removed = icons.git.removed,
-            },
-            source = function()
-              local gitsigns = vim.b.gitsigns_status_dict
-              if gitsigns then
-                return {
-                  added = gitsigns.added,
-                  modified = gitsigns.changed,
-                  removed = gitsigns.removed,
-                }
-              end
-            end,
+            "filename",
+            path = 1,
           },
         },
-        lualine_c = {
+        lualine_x = {
           {
             "diagnostics",
             always_visible = true,
             sources = { "nvim_lsp" },
             sections = { "error", "warn" },
           },
+          { "branch" },
         },
-        lualine_x = {},
         lualine_y = {},
         lualine_z = {},
       },

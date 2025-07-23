@@ -14,6 +14,7 @@ return {
     "folke/noice.nvim",
     enabled = false,
   },
+  { "smjonas/inc-rename.nvim", enabled = false },
   -- {
   --   "nvim-lua/plenary.nvim",
   --   enabled = false,
