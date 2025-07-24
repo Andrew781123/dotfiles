@@ -1,2 +1,4 @@
 .config/nvim/plugin/*
 .aider*
+env.secrets
+key.txt

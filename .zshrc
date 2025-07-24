@@ -79,26 +79,24 @@ else
 fi
 unset __conda_setup
 
+# Source secrets
+if [ -f "$HOME/.dotfiles/env.secrets" ]; then
+  source "$HOME/.dotfiles/env.secrets"
+fi
+
 # Aider configuration
-export DEEPSEEK_API_KEY=$(security find-generic-password -s "DEEPSEEK_API_KEY" -w)
 export AIDER_NO_AUTO_COMMITS=1
 export AIDER_CODE_THEME="nord-darker"
 # export AIDER_DEEPSEEK=1
 # export AIDER_AZURE=1
 export AIDER_MODEL="azure/o3-mini"
 export AIDER_VIM=1
-export AZURE_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w)
 export AZURE_API_VERSION=2024-12-01-preview
 export AZURE_API_BASE=https://andrewmakeapp1123.openai.azure.com/
 
 # Avante configuration
-export AZURE_OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w 2>/dev/null)
-export OPENROUTER_API_KEY=$(security find-generic-password -s "OPENROUTER_API_KEY" -w)
-export GEMINI_API_KEY=$(security find-generic-password -s "GEMINI_API_KEY" -w)
-export OPENAI_API_KEY=$(security find-generic-password -s "AZURE_API_KEY" -w)
 export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
-export LINEAR_API_KEY=$(security find-generic-password -s "LINEAR_API_KEY" -w)
-export GITHUB_ACCESS_TOKEN=$(security find-generic-password -s "GITHUB_ACCESS_TOKEN" -w)
+
 
 export EDITOR='nvim'
 
@@ -108,3 +106,11 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/andrew/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

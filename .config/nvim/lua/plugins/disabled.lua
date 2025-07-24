@@ -15,6 +15,8 @@ return {
     enabled = false,
   },
   { "smjonas/inc-rename.nvim", enabled = false },
+  { "folke/persistence.nvim", enabled = false },
+  { "folke/trouble.nvim", enabled = false },
   -- {
   --   "nvim-lua/plenary.nvim",
   --   enabled = false,
