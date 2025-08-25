@@ -1,1 +1,2 @@
-- The user is using the LazyVim distro and prefers to use its specific configuration syntax, such as the `keys` table for key mappings.
+- The user prefers the "pro" model.
+- The user wants me to avoid using `@ts-ignore` or the `any` type. I should find type-safe solutions instead.

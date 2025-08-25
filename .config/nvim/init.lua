@@ -1,7 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- require("oil").setup()
+require("oil").setup()
 
 local should_profile = os.getenv("NVIM_PROFILE")
 if should_profile then

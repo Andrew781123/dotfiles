@@ -1,7 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = true,
-  enabled = false,
   opts = {
     filesystem = {
       bind_to_cwd = true,
@@ -13,6 +12,9 @@ return {
     default_component_configs = {
       expander_collapsed = "›",
       expander_expanded = "‹",
+    },
+    window = {
+      width = 0.2,
     },
   },
   keys = {
