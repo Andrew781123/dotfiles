@@ -72,11 +72,6 @@ return {
       function()
         require("fzf-lua").git_branches({
           cmd = "git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)'",
-          actions = {
-            ["default"] = function(selected)
-              vim.cmd("Git checkout " .. selected[1])
-            end,
-          },
         })
       end,
       desc = "Checkout Git branch (sorted by recent commit)",

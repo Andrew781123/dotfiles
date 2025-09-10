@@ -1,5 +1,18 @@
 return {
   "neovim/nvim-lspconfig",
+  dependencies = {
+    -- Useful status updates for LSP.
+    { "j-hui/fidget.nvim", opts = {} },
+  },
+  -- config = function()
+  --   vim.diagnostic.config({
+  --     virtual_text = false,
+  --     float = {
+  --       source = "always", -- or "if_many"
+  --       severity_sort = true,
+  --     },
+  --   })
+  -- end,
   opts = function(_, opts)
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename" }
@@ -41,7 +54,7 @@ return {
         prefix = "●",
         -- this will set set the prefix to a function that returns the diagnostics icon based on the severity
         -- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
-        -- prefix = "icons",
+        prefix = "icons",
       },
       severity_sort = true,
       signs = {
