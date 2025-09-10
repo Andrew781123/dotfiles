@@ -56,7 +56,7 @@ return {
     }
   end,
   keys = {
-    { "<leader>fF", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+    { "<leader>fF", LazyVim.pick("files", { root = true }), desc = "Find Files (Root Dir)" },
     {
       "<leader>ff",
       function()

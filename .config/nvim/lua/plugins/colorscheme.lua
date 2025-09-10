@@ -25,6 +25,16 @@ return {
     lazy = true,
   },
   {
+    "nyoom-engineering/oxocarbon.nvim",
+    name = "oxocarbon",
+    lazy = true,
+  },
+  {
+    "vague2k/vague.nvim",
+    name = "vague",
+    lazy = true,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "moonfly",
