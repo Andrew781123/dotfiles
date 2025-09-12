@@ -9,10 +9,32 @@ function _G.get_oil_winbar()
   end
 end
 
+-- return {
+--   "stevearc/oil.nvim",
+--   ---@module 'oil'
+--   ---@type oil.SetupOpts
+--   opts = {
+--     view_options = {
+--       show_hidden = true,
+--     },
+--     win_options = {
+--       winbar = "%!v:lua.get_oil_winbar()",
+--     },
+--   },
+--   config = function(_, opts)
+--     require("oil").setup(opts)
+--     vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+--   end,
+--   -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+--   lazy = false,
+-- }
+
 return {
   "stevearc/oil.nvim",
-  ---@module 'oil'
-  ---@type oil.SetupOpts
+  lazy = false,
+  keys = {
+    { "<leader>e", "<cmd>Oil<CR>", desc = "Explorer" },
+  },
   opts = {
     view_options = {
       show_hidden = true,
@@ -21,9 +43,4 @@ return {
       winbar = "%!v:lua.get_oil_winbar()",
     },
   },
-  config = function()
-    vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-  end,
-  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-  lazy = false,
 }

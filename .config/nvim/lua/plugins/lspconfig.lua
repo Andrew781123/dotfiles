@@ -4,15 +4,6 @@ return {
     -- Useful status updates for LSP.
     { "j-hui/fidget.nvim", opts = {} },
   },
-  -- config = function()
-  --   vim.diagnostic.config({
-  --     virtual_text = false,
-  --     float = {
-  --       source = "always", -- or "if_many"
-  --       severity_sort = true,
-  --     },
-  --   })
-  -- end,
   opts = function(_, opts)
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename" }
@@ -38,34 +29,13 @@ return {
           apply = true,
           context = {
             only = { "source.fixAll.eslint" },
-            diagnostics = {},
           },
         })
       end,
       desc = "Fix All ESLint Issues",
     }
 
-    opts.diagnostics = {
-      underline = true,
-      update_in_insert = false,
-      virtual_text = {
-        spacing = 4,
-        source = "if_many",
-        prefix = "●",
-        -- this will set set the prefix to a function that returns the diagnostics icon based on the severity
-        -- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
-        prefix = "icons",
-      },
-      severity_sort = true,
-      signs = {
-        text = {
-          [vim.diagnostic.severity.ERROR] = LazyVim.config.icons.diagnostics.Error,
-          [vim.diagnostic.severity.WARN] = LazyVim.config.icons.diagnostics.Warn,
-          [vim.diagnostic.severity.HINT] = LazyVim.config.icons.diagnostics.Hint,
-          [vim.diagnostic.severity.INFO] = LazyVim.config.icons.diagnostics.Info,
-        },
-      },
-    }
+    opts.diagnostics = {}
 
     opts.inlay_hints = {
       enabled = false,
@@ -103,11 +73,13 @@ return {
         init_options = {
           codeAction = {
             preferred = { "quickfix", "source", "refactor" },
+            priority = { "vtsls" },
           },
         },
       },
       eslint = {
         settings = {
+          run = "onSave",
           -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
           workingDirectories = { mode = "auto" },
           format = auto_format,

@@ -26,3 +26,8 @@ vim.g.moonflyVirtualTextColor = true
 opt.termguicolors = true
 
 vim.lsp.set_log_level("off")
+
+vim.diagnostic.config({
+  virtual_text = false,
+  severity_sort = true,
+})
