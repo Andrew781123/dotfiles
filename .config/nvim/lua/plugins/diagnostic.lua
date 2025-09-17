@@ -15,7 +15,7 @@ return {
         vertical_end = " └", -- End of vertical line for multiline
       },
       options = {
-        show_all_diags_on_cursorline = true,
+        show_all_diags_on_cursorline = false,
         multilines = {
           -- Enable multiline diagnostic messages
           enabled = true,
@@ -32,9 +32,9 @@ return {
       },
     })
     vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
-    for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = "", texthl = hl, numhl = "" })
-    end
+    -- for _, type in ipairs({ "Error", "Warn", "Hint", "Info" }) do
+    --   local hl = "DiagnosticSign" .. type
+    --   vim.fn.sign_define(hl, { text = "", texthl = hl, numhl = "" })
+    -- end
   end,
 }

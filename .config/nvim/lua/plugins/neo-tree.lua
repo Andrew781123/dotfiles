@@ -18,6 +18,8 @@ return {
     },
   },
   keys = {
+    { "<leader>e", false },
+    { "<leader>E", false },
     {
       "<leader>nE",
       function()

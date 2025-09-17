@@ -31,3 +31,7 @@ vim.diagnostic.config({
   virtual_text = false,
   severity_sort = true,
 })
+
+vim.g.maplocalleader = ";"
+vim.opt.formatoptions:remove({ "r", "o" })
+vim.opt.formatoptions:append("n")
