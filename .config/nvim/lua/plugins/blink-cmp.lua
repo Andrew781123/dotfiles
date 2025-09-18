@@ -12,9 +12,6 @@ return {
     }
     opts.completion = {
       menu = {
-        auto_show = function(ctx)
-          return ctx.mode ~= "cmdline"
-        end,
         draw = {
           columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
         },
@@ -30,6 +27,9 @@ return {
           },
         },
       },
+    }
+    opts.cmdline = {
+      enabled = false,
     }
     opts.sources = {
       default = { "avante_commands", "avante_mentions", "avante_files", "lsp", "path", "snippets" },
