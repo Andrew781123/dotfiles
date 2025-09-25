@@ -29,7 +29,6 @@ echo "Setting up dotfiles symlinks..."
 # format: source_path -> destination_path
 declare -A symlinks=(
   ["$DOTFILES_DIR/.aerospace.toml"]="$HOME/.aerospace.toml"
-  ["$DOTFILES_DIR/.p10k.zsh"]="$HOME/.p10k.zsh"
   ["$DOTFILES_DIR/.tmux.conf"]="$HOME/.tmux.conf"
   ["$DOTFILES_DIR/.zshrc"]="$HOME/.zshrc"
   ["$DOTFILES_DIR/.config/gemini"]="$HOME/.config/gemini"

@@ -1,10 +1,5 @@
-# Enable Powerlevel10k instant prompt - must be at the top
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # Environment variables
-export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=vim
 export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
@@ -18,9 +13,6 @@ SAVEHIST=10000
 HISTFILE=~/.cache/zshhistory
 setopt appendhistory
 
-# oh-my-zsh initialization
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
 
 # Completion
 autoload -U compinit
@@ -42,7 +34,16 @@ alias z="zoxide"
 alias y="yazi"
 eval $(thefuck --alias)
 
-# Extended git aliases with no-verify
+# Git
+alias gaa='git add --all'
+alias gsw='git switch'
+alias gswc='git switch --create'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase --interactive'
+alias gstu='gsta --include-untracked'
+alias gstp='git stash pop'
 alias gcmsg="git commit --no-verify -m"
 alias gpsup='git push --no-verify --set-upstream origin $(git_current_branch)'
 alias gp="git push --no-verify"
@@ -52,7 +53,6 @@ alias gcn!="git commit --no-verify --no-edit --amend"
 alias grhs="git reset --soft HEAD~"
 
 # Plugin management
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -100,9 +100,6 @@ export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
 
 export EDITOR='nvim'
 
-# Load p10k configuration
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
@@ -115,3 +112,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
