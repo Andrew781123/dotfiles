@@ -22,7 +22,6 @@ compinit
 _comp_options+=(globdots)
 
 # Aliases
-# alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa -tree"
 alias cat="bat"
@@ -30,7 +29,6 @@ alias tas="tmux attach-session -t"
 alias tns="tmux new -s"
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
-alias z="zoxide"
 alias y="yazi"
 eval $(thefuck --alias)
 
@@ -45,6 +43,7 @@ alias grbi='git rebase --interactive'
 alias gstu='gsta --include-untracked'
 alias gstp='git stash pop'
 alias gcmsg="git commit --no-verify -m"
+alias gf='git fetch'
 alias gpsup='git push --no-verify --set-upstream origin $(git_current_branch)'
 alias gp="git push --no-verify"
 alias ggfl="git push --no-verify --force-with-lease"
@@ -115,3 +114,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"

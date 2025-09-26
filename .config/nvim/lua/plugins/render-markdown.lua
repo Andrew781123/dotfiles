@@ -5,5 +5,23 @@ return {
   ---@type render.md.UserConfig
   opts = {
     completions = { lsp = { enabled = true } },
+    heading = {
+      backgrounds = {},
+      border = false,
+      sign = false,
+      border = true,
+      below = "",
+      above = "",
+      left_pad = 0,
+      position = "left",
+      icons = {
+        "█ ",
+        "██ ",
+        "███ ",
+        "████ ",
+        "█████ ",
+        "██████ ",
+      },
+    },
   },
 }
