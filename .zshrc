@@ -33,6 +33,9 @@ alias y="yazi"
 eval $(thefuck --alias)
 
 # Git
+git_current_branch() {
+  git rev-parse --abbrev-ref HEAD
+}
 alias gaa='git add --all'
 alias gsw='git switch'
 alias gswc='git switch --create'
@@ -40,10 +43,12 @@ alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias grbi='git rebase --interactive'
+alias gsta='git stash push'
 alias gstu='gsta --include-untracked'
 alias gstp='git stash pop'
 alias gcmsg="git commit --no-verify -m"
 alias gf='git fetch'
+alias ggu='git pull --rebase origin $(git_current_branch)'
 alias gpsup='git push --no-verify --set-upstream origin $(git_current_branch)'
 alias gp="git push --no-verify"
 alias ggfl="git push --no-verify --force-with-lease"

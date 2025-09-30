@@ -6,6 +6,10 @@ palette = "moonfly"
 [c]
 style = "green"
 
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
 [directory]
 truncation_length = 4
 style = "fern"
@@ -39,3 +43,7 @@ red = "#f07496"
 
 [nodejs]
 format = '[$symbol$version](bold green) '
+disabled = true
+
+[cmd_duration]
+format = '[$duration](bold yellow)'
