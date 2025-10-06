@@ -4,6 +4,7 @@ return {
     -- Useful status updates for LSP.
     { "j-hui/fidget.nvim", opts = {} },
   },
+  disabled = false,
   opts = function(_, opts)
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename" }
@@ -35,7 +36,18 @@ return {
       desc = "Fix All ESLint Issues",
     }
 
-    -- opts.diagnostics = {}
+    opts.diagnostics = {
+      virtual_text = false,
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = LazyVim.config.icons.diagnostics.Error,
+          [vim.diagnostic.severity.WARN] = LazyVim.config.icons.diagnostics.Warn,
+          [vim.diagnostic.severity.HINT] = LazyVim.config.icons.diagnostics.Hint,
+          [vim.diagnostic.severity.INFO] = LazyVim.config.icons.diagnostics.Info,
+        },
+      },
+      float = false,
+    }
 
     opts.inlay_hints = {
       enabled = false,
