@@ -26,7 +26,7 @@ require("lazy").setup({
   { import = "plugins" }, -- Disable all other plugins
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", commit = "0329bc0" },
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },

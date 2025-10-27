@@ -4,9 +4,5 @@ return {
   opts = {
     ensure_installed = { "http", "json" },
     auto_install = true,
-    ignore_install = { "prisma" },
-    highlight = {
-      disable = { "prisma" },
-    },
   },
 }

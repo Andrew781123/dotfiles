@@ -1,8 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.lsp.set_log_level("debug")
-
 local should_profile = os.getenv("NVIM_PROFILE")
 if should_profile then
   require("profile").instrument_autocmds()

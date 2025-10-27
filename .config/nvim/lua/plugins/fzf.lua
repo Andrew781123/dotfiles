@@ -75,7 +75,7 @@ return {
       "<leader>gb",
       function()
         require("fzf-lua").git_branches({
-          cmd = "git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)'",
+          cmd = "git branch --sort=-committerdate",
         })
       end,
       desc = "Checkout Git branch (sorted by recent commit)",
