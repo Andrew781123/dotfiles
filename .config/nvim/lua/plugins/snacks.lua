@@ -6,6 +6,7 @@ return {
     scope = { enabled = false },
     dim = { enabled = false },
     zen = { enabled = false },
+    image = { enabled = true },
   },
   keys = {
     {

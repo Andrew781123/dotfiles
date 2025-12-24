@@ -19,13 +19,13 @@ return {
           },
         },
         lualine_x = {
+          { "branch" },
           {
             "diagnostics",
             always_visible = true,
             sources = { "nvim_lsp" },
             sections = { "error", "warn" },
           },
-          { "branch" },
         },
         lualine_y = {},
         lualine_z = {},

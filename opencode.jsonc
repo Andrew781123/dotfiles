@@ -12,6 +12,13 @@
               "enabled": true // Default: inferred from `effort` or `max_tokens`
             }
           }
+        },
+        "x-ai/grok-4.1-fast:free": {
+          "options": {
+            "reasoning": {
+              "enabled": true // Default: inferred from `effort` or `max_tokens`
+            }
+          }
         }
       }
     }

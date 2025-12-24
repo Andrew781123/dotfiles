@@ -49,6 +49,9 @@ return {
         cwd_prompt = false,
         hidden = true,
       },
+      git_status = {
+        previewer = false, -- Disable preview to avoid assertion error
+      },
       winopts = {
         fullscreen = true,
         preview = {
