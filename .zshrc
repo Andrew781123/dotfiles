@@ -55,6 +55,8 @@ alias ggfl="git push --no-verify --force-with-lease"
 alias ggf="git push --no-verify --force"
 alias gcn!="git commit --no-verify --no-edit --amend"
 alias grhs="git reset --soft HEAD~"
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 
 # Plugin management
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

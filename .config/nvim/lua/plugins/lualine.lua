@@ -28,7 +28,11 @@ return {
           },
         },
         lualine_y = {},
-        lualine_z = {},
+        lualine_z = {
+          {
+            require("opencode").statusline,
+          },
+        },
       },
     }
   end,
