@@ -7,11 +7,6 @@ return {
     { "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
   },
   config = function()
-    ---@type opencode.Opts
-    vim.g.opencode_opts = {
-      -- Your configuration, if any — see `lua/opencode/config.lua`, or "goto definition" on the type or field.
-    }
-
     -- Required for `opts.events.reload`.
     vim.o.autoread = true
 
@@ -32,6 +27,9 @@ return {
     vim.keymap.set("n", "goo", function()
       return require("opencode").operator("@this ") .. "_"
     end, { desc = "Add line to opencode", expr = true })
+    vim.keymap.set("n", "gob", function()
+      return require("opencode").operator("@buffer ") .. "_"
+    end, { desc = "Add buffer to opencode", expr = true })
 
     vim.keymap.set("n", "<S-C-u>", function()
       require("opencode").command("session.half.page.up")

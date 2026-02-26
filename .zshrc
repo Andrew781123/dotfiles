@@ -30,6 +30,7 @@ alias tns="tmux new -s"
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 alias y="yazi"
+alias oc="opencode --port"
 eval $(thefuck --alias)
 
 # Git
