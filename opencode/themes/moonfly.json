@@ -1,0 +1,248 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "moonflyBlack": "#080808",
+    "moonflyWhite": "#c6c6c6",
+    "moonflyGrey0": "#323437",
+    "moonflyGrey1": "#373c4d",
+    "moonflyGrey7": "#121212",
+    "moonflyGrey11": "#1c1c1c",
+    "moonflyGrey13": "#212121",
+    "moonflyGrey15": "#262626",
+    "moonflyGrey16": "#292929",
+    "moonflyGrey18": "#2e2e2e",
+    "moonflyGrey23": "#3a3a3a",
+    "moonflyGrey27": "#444444",
+    "moonflyGrey30": "#4e4e4e",
+    "moonflyGrey35": "#585858",
+    "moonflyGrey39": "#626262",
+    "moonflyGrey50": "#808080",
+    "moonflyGrey58": "#949494",
+    "moonflyGrey62": "#9e9e9e",
+    "moonflyGrey70": "#b2b2b2",
+    "moonflyGrey89": "#e4e4e4",
+    "moonflyRed": "#ff5d5d",
+    "moonflyCrimson": "#ff5189",
+    "moonflyCranberry": "#e65e72",
+    "moonflyCoral": "#f09479",
+    "moonflyCinnamon": "#e9958e",
+    "moonflyOrchid": "#e196a2",
+    "moonflyOrange": "#de935f",
+    "moonflyYellow": "#e3c78a",
+    "moonflyKhaki": "#c6c684",
+    "moonflyLime": "#85dc85",
+    "moonflyGreen": "#8cc85f",
+    "moonflyEmerald": "#36c692",
+    "moonflyTurquoise": "#79dac8",
+    "moonflySky": "#74b2ff",
+    "moonflyBlue": "#80a0ff",
+    "moonflyLavender": "#adadf3",
+    "moonflyViolet": "#cf87e8",
+    "moonflyPurple": "#ae81ff",
+    "moonflyBay": "#4d5d8d",
+    "moonflySlate": "#748999",
+    "moonflyHaze": "#88a2b7"
+  },
+  "theme": {
+    "primary": {
+      "dark": "moonflyBlue",
+      "light": "moonflyBlue"
+    },
+    "secondary": {
+      "dark": "moonflySky",
+      "light": "moonflySky"
+    },
+    "accent": {
+      "dark": "moonflyViolet",
+      "light": "moonflyViolet"
+    },
+    "error": {
+      "dark": "moonflyRed",
+      "light": "moonflyRed"
+    },
+    "warning": {
+      "dark": "moonflyOrange",
+      "light": "moonflyOrange"
+    },
+    "success": {
+      "dark": "moonflyGreen",
+      "light": "moonflyGreen"
+    },
+    "info": {
+      "dark": "moonflySky",
+      "light": "moonflySky"
+    },
+    "text": {
+      "dark": "moonflyWhite",
+      "light": "moonflyGrey16"
+    },
+    "textMuted": {
+      "dark": "moonflyGrey62",
+      "light": "moonflyGrey58"
+    },
+    "background": {
+      "dark": "moonflyBlack",
+      "light": "moonflyGrey89"
+    },
+    "backgroundPanel": {
+      "dark": "moonflyGrey13",
+      "light": "moonflyGrey70"
+    },
+    "backgroundElement": {
+      "dark": "moonflyGrey11",
+      "light": "moonflyGrey50"
+    },
+    "border": {
+      "dark": "moonflyGrey23",
+      "light": "moonflyGrey39"
+    },
+    "borderActive": {
+      "dark": "moonflyGrey35",
+      "light": "moonflyGrey27"
+    },
+    "borderSubtle": {
+      "dark": "moonflyGrey18",
+      "light": "moonflyGrey30"
+    },
+    "diffAdded": {
+      "dark": "moonflyEmerald",
+      "light": "moonflyEmerald"
+    },
+    "diffRemoved": {
+      "dark": "moonflyRed",
+      "light": "moonflyRed"
+    },
+    "diffContext": {
+      "dark": "moonflyGrey39",
+      "light": "moonflyGrey50"
+    },
+    "diffHunkHeader": {
+      "dark": "moonflyGrey39",
+      "light": "moonflyGrey50"
+    },
+    "diffHighlightAdded": {
+      "dark": "moonflyEmerald",
+      "light": "moonflyEmerald"
+    },
+    "diffHighlightRemoved": {
+      "dark": "moonflyRed",
+      "light": "moonflyRed"
+    },
+    "diffAddedBg": {
+      "dark": "moonflyGrey13",
+      "light": "moonflyGrey70"
+    },
+    "diffRemovedBg": {
+      "dark": "moonflyGrey13",
+      "light": "moonflyGrey70"
+    },
+    "diffContextBg": {
+      "dark": "moonflyGrey11",
+      "light": "moonflyGrey50"
+    },
+    "diffLineNumber": {
+      "dark": "moonflyGrey39",
+      "light": "moonflyGrey62"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "moonflyGrey13",
+      "light": "moonflyGrey70"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "moonflyGrey13",
+      "light": "moonflyGrey70"
+    },
+    "markdownText": {
+      "dark": "moonflyWhite",
+      "light": "moonflyBlack"
+    },
+    "markdownHeading": {
+      "dark": "moonflyViolet",
+      "light": "moonflyViolet"
+    },
+    "markdownLink": {
+      "dark": "moonflyTurquoise",
+      "light": "moonflyTurquoise"
+    },
+    "markdownLinkText": {
+      "dark": "moonflyGreen",
+      "light": "moonflyGreen"
+    },
+    "markdownCode": {
+      "dark": "moonflyKhaki",
+      "light": "moonflyKhaki"
+    },
+    "markdownBlockQuote": {
+      "dark": "moonflyGrey58",
+      "light": "moonflyGrey58"
+    },
+    "markdownEmph": {
+      "dark": "moonflyOrchid",
+      "light": "moonflyOrchid"
+    },
+    "markdownStrong": {
+      "dark": "moonflyCinnamon",
+      "light": "moonflyCinnamon"
+    },
+    "markdownHorizontalRule": {
+      "dark": "moonflyGrey39",
+      "light": "moonflyGrey39"
+    },
+    "markdownListItem": {
+      "dark": "moonflyBlue",
+      "light": "moonflyBlue"
+    },
+    "markdownListEnumeration": {
+      "dark": "moonflyTurquoise",
+      "light": "moonflyTurquoise"
+    },
+    "markdownImage": {
+      "dark": "moonflyTurquoise",
+      "light": "moonflyTurquoise"
+    },
+    "markdownImageText": {
+      "dark": "moonflyGreen",
+      "light": "moonflyGreen"
+    },
+    "markdownCodeBlock": {
+      "dark": "moonflyWhite",
+      "light": "moonflyBlack"
+    },
+    "syntaxComment": {
+      "dark": "moonflyGrey58",
+      "light": "moonflyGrey58"
+    },
+    "syntaxKeyword": {
+      "dark": "moonflyViolet",
+      "light": "moonflyViolet"
+    },
+    "syntaxFunction": {
+      "dark": "moonflySky",
+      "light": "moonflySky"
+    },
+    "syntaxVariable": {
+      "dark": "moonflyWhite",
+      "light": "moonflyBlack"
+    },
+    "syntaxString": {
+      "dark": "moonflyKhaki",
+      "light": "moonflyKhaki"
+    },
+    "syntaxNumber": {
+      "dark": "moonflyOrange",
+      "light": "moonflyOrange"
+    },
+    "syntaxType": {
+      "dark": "moonflyEmerald",
+      "light": "moonflyEmerald"
+    },
+    "syntaxOperator": {
+      "dark": "moonflyCranberry",
+      "light": "moonflyCranberry"
+    },
+    "syntaxPunctuation": {
+      "dark": "moonflyWhite",
+      "light": "moonflyBlack"
+    }
+  }
+}
