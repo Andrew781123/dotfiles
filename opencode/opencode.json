@@ -1,5 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "OpenCoder",
-  "theme": "moonfly"
+  "plugin": ["opencode-gemini-auth@latest"],
+  "default_agent": "OpenCoder"
 }

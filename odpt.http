@@ -1,0 +1,1 @@
+GET https://api.odpt.org/api/v4/odpt:StationTimetable?owl:sameAs=odpt.StationTimetable:TokyoMetro.Marunouchi.Tokyo.TokyoMetro.Ogikubo.Weekday&acl:consumerKey=d1d8essmqnzk5f8ytk9a8u54johs9t7hdxvy6a3bbbjms3emmvfz0l8wmyb1nmkf
