@@ -3,6 +3,8 @@ pages:
     columns:
       - size: small
         widgets:
+          - $include: widgets/radarr.yml
+
           - type: calendar
             first-day-of-week: monday
 
@@ -70,6 +72,8 @@ pages:
           - type: weather
             location: Hong Kong
             units: metric
+
+          - $include: widgets/weather.yml
 
           - type: markets
             markets:
