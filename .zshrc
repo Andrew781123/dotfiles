@@ -73,19 +73,6 @@ set -o vi
 [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
 [ -s "/Users/chiholee/.bun/_bun" ] && source "/Users/chiholee/.bun/_bun"
 
-# Conda initialization
-__conda_setup="$('/Users/chiholee/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/chiholee/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/chiholee/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/chiholee/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
 # Source secrets
 if [ -f "$HOME/.dotfiles/env.secrets" ]; then
   source "$HOME/.dotfiles/env.secrets"
@@ -124,3 +111,5 @@ eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"

@@ -1,0 +1,93 @@
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: to-do
+
+          - type: group
+            title: "Vim / Neovim Mastery"
+            widgets:
+              - type: rss
+                feeds:
+                  - url: https://neovim.io/news.xml
+                    title: Neovim Official
+                  - url: https://this-week-in-neovim.org/rss.xml
+                    title: This Week in Neovim
+              - type: bookmarks
+                groups:
+                  - name: "Quick Motions"
+                    links:
+                      - name: "ciw -> Change Inside Word"
+                        url: "#"
+                      - name: "f{char} -> Find Char"
+                        url: "#"
+                      - name: "ctrl+o -> Jump Back"
+                        url: "#"
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: hacker-news
+              - type: lobsters
+
+          - type: group
+            title: "Engineering & AI"
+            widgets:
+              - type: rss
+                feeds:
+                  - url: https://blog.google/technology/ai/rss/
+                  - url: https://vercel.com/blog/feed
+                  - url: https://www.builder.io/blog/feed.xml
+                  - url: https://martinfowler.com/feed.atom
+
+          - type: videos
+            channels:
+              - UCXuqSBlHAE6Xw-yeJA0Tunw # LTT
+              - UCsBjURrPoezykLs9EqgamOA # Fireship
+              - UCBJycsmduvYEL83R_U4JriQ # MKBHD
+              - UCbRP3c757lWg9M-U7TyEkXA # Theo
+              - UCh_KRmXM4RiQFvOBBDpvC6Q # 志豪Live Show
+              - UCr9O9uLhxnB5GQenVseEAnA # HEBEFACE
+              - UCj1VqrHhDte54oLgPG4xpuQ # Stuff Made Here
+              - UCdWNwPuaS1o2dIzugNMXWtw # 我要做富翁
+              - UCiJnCs2K5gP-DXnMxlstC9A # 毛記電視
+              - UC83EeYmQyroJD61psI0gqyQ # Jimpae 占皮
+              - UCzM2jQWmoeTvpEw63x5Rsdg # Finance730
+              - UC-eoXVXWKQ3T7UeUbSPHRvg # Uwants 遊戲講
+              - UCZGVB6g74LXWtkR3fX50ykg # Edwin H.
+              - UCUyeluBRhGPCW4rPe_UvBZQ # The PrimeTime
+              - UCbCjnhRj4AC2H1N9BKj-6NA # 01檔案
+              - UCajzkk_Rxm4kzBW7HTT4JXg # 格物 Blank in Blank
+              - UC8ENHE5xdFSwx71u3fDH5Xw # ThePrimeagen
+
+      - size: small
+        widgets:
+          - type: weather
+            location: Hong Kong
+            units: metric
+
+          - type: markets
+            markets:
+              - symbol: VOO
+              - symbol: QQQM
+              - symbol: VEU
+              - symbol: SMH
+              - symbol: GLDM
+              - symbol: GOOGL
+              - symbol: MSFT
+              - symbol: TSLA
+
+          - type: releases
+            cache: 1d
+            repositories:
+              - neovim/neovim
+              - expo/expo
+              - microsoft/TypeScript
+              - LazyVim/LazyVim
+              - vercel/next.js
+              - facebook/react
