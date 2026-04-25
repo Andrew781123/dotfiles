@@ -3,16 +3,15 @@ pages:
     columns:
       - size: small
         widgets:
-          - type: clock
-            hour-format: 24h
+          - type: group
+            widgets:
+              - type: clock
+                hour-format: 24h
 
-          - type: calendar
-            first-day-of-week: monday
+              - type: calendar
+                first-day-of-week: monday
 
           - type: to-do
-
-          - type: group
-            title: "Vim / Neovim Mastery"
 
           - type: markets
             markets:
@@ -82,6 +81,9 @@ pages:
               - UC6biysICWOJ-C3P4Tyeggzg # Low Level
               - UChk6TQce1EJMn6_liKdHDog # ThePrimeagenHighlights
               - UCAlVuubC3GE6kFFeNBEkoUQ # 危險人物2.0
+              - UCYeiozh-4QwuC1sjgCmB92w # DevOps Toolbox
+              - UCej-p3P_4xe5fRPKATsOk9A # 胡‧說樓市
+              - UCB3pBfnruGVgbP1r5Ya2CEg # 叉雞
 
       - size: small
         widgets:
@@ -109,6 +111,15 @@ pages:
               - LazyVim/LazyVim
               - vercel/next.js
               - facebook/react
+              - jellyfin/jellyfin
+              - Sonarr/Sonarr
+              - seerr-team-seerr
+              - Radarr/Radarr
+              - lidarr/Lidarr
+              - morpheus655/bazarr
+              - pi-hole/pi-hole
+              - glance-cgi/glance
+              - pulse-navbar/pulse
 
   # - name: Homelab
   #   columns:
