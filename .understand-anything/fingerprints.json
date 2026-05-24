@@ -1,0 +1,1335 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "609f0dc632158d60d6088a657172c4759ac7825d",
+  "generatedAt": "2026-05-24T18:22:00.620Z",
+  "files": {
+    ".aerospace.toml": {
+      "filePath": ".aerospace.toml",
+      "contentHash": "f91cef3b9ca68cac89ecb41fbf7a0cc570e00b7361a6559c1d1d648231fe8ea3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    ".config/gemini/settings.json": {
+      "filePath": ".config/gemini/settings.json",
+      "contentHash": "d04f33b7af02891e10fb4d57579ceb61f7db105c2cd5e29591cc2d47c419ff74",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    ".config/nvim/.neoconf.json": {
+      "filePath": ".config/nvim/.neoconf.json",
+      "contentHash": "1819a5b64b71521f214b374bdb3b4dd7531a2b91b881c0803e0029811da7f3e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    ".config/nvim/init.lua": {
+      "filePath": ".config/nvim/init.lua",
+      "contentHash": "5ca20b9f96a107a52d26d6886111b294efcdf4f7f22666aab7368352d9a9b61a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lazy-lock.json": {
+      "filePath": ".config/nvim/lazy-lock.json",
+      "contentHash": "448c76b2f18b1b4c549726fb989a700d54b9664d16ef13b2532cf021197a7039",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 219,
+      "hasStructuralAnalysis": true
+    },
+    ".config/nvim/lazyvim.json": {
+      "filePath": ".config/nvim/lazyvim.json",
+      "contentHash": "5cf4c0375dd2a7115d7054e91af9aefdc039002d848ca60d76f8f991b2d436f4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    ".config/nvim/lua/.DS_Store": {
+      "filePath": ".config/nvim/lua/.DS_Store",
+      "contentHash": "4339ac4825c57f0877c759c56fb62f13f6b923d7cef008c211a3c45136648e0e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/config/autocmds.lua": {
+      "filePath": ".config/nvim/lua/config/autocmds.lua",
+      "contentHash": "4326b1f501f99b11503d649730a5814037c8c90cc304f8cbc512cf26ac982d52",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/config/keymaps.lua": {
+      "filePath": ".config/nvim/lua/config/keymaps.lua",
+      "contentHash": "3267ccd02dc7a24ed3ab6245120d66ada98e9a6e1bea1c315a80ddcff93b3c24",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/config/lazy.lua": {
+      "filePath": ".config/nvim/lua/config/lazy.lua",
+      "contentHash": "465c94d0f5e95ac7ef5a9d7f5c4b986841d6217e256bb2a9e28d43ccc51e6a0e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/config/options.lua": {
+      "filePath": ".config/nvim/lua/config/options.lua",
+      "contentHash": "25702773dac7d134a773e0e4927aa82144c634650cef7b2c6e44e95f7919067e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/99.lua": {
+      "filePath": ".config/nvim/lua/plugins/99.lua",
+      "contentHash": "386b20d0a1ba9ab768dcdbe3dcd712e77d1da658933504d4e6b2d91e64ad78fa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 98,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/aider.lua": {
+      "filePath": ".config/nvim/lua/plugins/aider.lua",
+      "contentHash": "36d3b232f315d252d319cdd2b21f1c66df2fe9ab37aa13e86acfbddc9cee0c64",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/avante.lua": {
+      "filePath": ".config/nvim/lua/plugins/avante.lua",
+      "contentHash": "197067cf9c805d020765da3634b3eab651d0e3c637fe02e14a8e9db1ba5eef53",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/blink-cmp.lua": {
+      "filePath": ".config/nvim/lua/plugins/blink-cmp.lua",
+      "contentHash": "d55608937e7a075f1e09ca7f82541c22008e4e4fa7eb42c17d03c9cdd278ce28",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/checkmate.lua": {
+      "filePath": ".config/nvim/lua/plugins/checkmate.lua",
+      "contentHash": "367b7ce955c1c5e4a33670a0b506199fb802595afbaaba38590f2ed60eabcdcb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/cmp.lua": {
+      "filePath": ".config/nvim/lua/plugins/cmp.lua",
+      "contentHash": "1bc2260e6587264df532ff37ef6327e0a715dd8a338ccf9bcef6c9ce0c9ed4e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/colorscheme.lua": {
+      "filePath": ".config/nvim/lua/plugins/colorscheme.lua",
+      "contentHash": "57be6cf4f8419de1ca53e7721c4215175dc85ed1b14a62d99baba2868c5a6d4d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/conform.lua": {
+      "filePath": ".config/nvim/lua/plugins/conform.lua",
+      "contentHash": "6758c3a931d48307ff372dabbe72b9805ca30d79f664ea7f8b7d704aa89b41c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/dadbod.lua": {
+      "filePath": ".config/nvim/lua/plugins/dadbod.lua",
+      "contentHash": "20ea9252a30c30e84c5b340c9961e364285d374a602e952fb5417245c6fc0033",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/dashboard.lua": {
+      "filePath": ".config/nvim/lua/plugins/dashboard.lua",
+      "contentHash": "5eab65920803d1caae11c190c2e96eaf3584264292a94b09d0b78731e7593bbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/diagnostic.lua": {
+      "filePath": ".config/nvim/lua/plugins/diagnostic.lua",
+      "contentHash": "bbe50e47ad864e0f559455a4dbb71c2b9b17f561aab4fb4ea61c3fa8c1e086df",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/diffview.lua": {
+      "filePath": ".config/nvim/lua/plugins/diffview.lua",
+      "contentHash": "70b2542d2f569ce20bbeae08f62beb854325349558f4750a734627ade94efeab",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/disabled.lua": {
+      "filePath": ".config/nvim/lua/plugins/disabled.lua",
+      "contentHash": "fcd600a5cc2f58e5f104e47f654eaa67dde562519775fd7bcc5a32abd7b0ca2e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/fugitive.lua": {
+      "filePath": ".config/nvim/lua/plugins/fugitive.lua",
+      "contentHash": "2f09f94cdce376effe31b532e4a0a1d67caab50e3b7bcf1e7b1c81f43c1f4567",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/fzf.lua": {
+      "filePath": ".config/nvim/lua/plugins/fzf.lua",
+      "contentHash": "b042d9ae6a7b3946d07205b682b8892351c2fcc07105b697a60389b46910f2e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 88,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/grug-far.lua": {
+      "filePath": ".config/nvim/lua/plugins/grug-far.lua",
+      "contentHash": "4a84f5a037550bf8686226211d2f6b4bb57c968400e6979aa5fe407c1173c117",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/kulala.lua": {
+      "filePath": ".config/nvim/lua/plugins/kulala.lua",
+      "contentHash": "cbec68b8ff6bca81f7889817ee9d44c79932b70f30e7a8a20feafac9b7a4e042",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/lspconfig.lua": {
+      "filePath": ".config/nvim/lua/plugins/lspconfig.lua",
+      "contentHash": "153b2c5da600c7d17aa190733363b9518b485acfe4b617cfeaa481073dbad007",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 190,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/lualine.lua": {
+      "filePath": ".config/nvim/lua/plugins/lualine.lua",
+      "contentHash": "3baa57f99699f60d626a5853071ebc38662d1c87c9434ca0d45fa53dfefb1b8d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/markdown-preview.lua": {
+      "filePath": ".config/nvim/lua/plugins/markdown-preview.lua",
+      "contentHash": "66a432554866bf17258cbe1e75f199e23ea0d32133a086a680175ed50025bc71",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/matchup.lua": {
+      "filePath": ".config/nvim/lua/plugins/matchup.lua",
+      "contentHash": "8f5cb7519f88e3875e07042d65b9495359da86dd2e5af5d69049fafd4918f681",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/mini-files.lua": {
+      "filePath": ".config/nvim/lua/plugins/mini-files.lua",
+      "contentHash": "6d56f2af60ebb32f3549d9b02857e28278d1cce46ef4364d8a60d882af304d38",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/neo-tree.lua": {
+      "filePath": ".config/nvim/lua/plugins/neo-tree.lua",
+      "contentHash": "e184e1685e81d1ddddca09d06a643a7edd0caaeb5bdd782e54be7eb4b3f0dcec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/neorg.lua": {
+      "filePath": ".config/nvim/lua/plugins/neorg.lua",
+      "contentHash": "a1a254071a121976bc79ae4ff9d741ec7794e1dea50dc624abe7de5a592921e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/no-neck-pain.lua": {
+      "filePath": ".config/nvim/lua/plugins/no-neck-pain.lua",
+      "contentHash": "d874ed80f9af749e827e613801e071c25c0d5fbcbb1d525865870ae60ad315db",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/nvim-lint.lua": {
+      "filePath": ".config/nvim/lua/plugins/nvim-lint.lua",
+      "contentHash": "e1e0d403c00e603964be85115395b59fe6cfcd583b9015614ccc824ca8ea2692",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/oil.lua": {
+      "filePath": ".config/nvim/lua/plugins/oil.lua",
+      "contentHash": "a88e1488cdbe745739ec1fef7b853c5b38b08d7636c0029442327f10c821ed76",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/opencode.lua": {
+      "filePath": ".config/nvim/lua/plugins/opencode.lua",
+      "contentHash": "b74dd39f82f153c77ce5891ac89124da2de1fb7eb0d3a446059b25f50c87c8e2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/render-markdown.lua": {
+      "filePath": ".config/nvim/lua/plugins/render-markdown.lua",
+      "contentHash": "9b4ff8afb3a305b309534fff7f2734fedd58fa36afa73ed82e66ed5a266b8ddb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/snacks.lua": {
+      "filePath": ".config/nvim/lua/plugins/snacks.lua",
+      "contentHash": "77e2477368218b4f39cfea217ec79936f92c67daf2f98333aec3b846c5720535",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/spectre.lua": {
+      "filePath": ".config/nvim/lua/plugins/spectre.lua",
+      "contentHash": "0c8a5737952c4fbd7843f7d384b7f20c602bd50f55531f5bc7c49b5a91926696",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/supermaven.lua": {
+      "filePath": ".config/nvim/lua/plugins/supermaven.lua",
+      "contentHash": "f2f529240facb5a466b704f444d8ded79042f8b80136732420c47f8e26947d72",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/surround.lua": {
+      "filePath": ".config/nvim/lua/plugins/surround.lua",
+      "contentHash": "ab931692540f6aa5b5f0347e5e873b3655cd3d9fa99c2a23879172f023363d11",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/telescope.lua": {
+      "filePath": ".config/nvim/lua/plugins/telescope.lua",
+      "contentHash": "e273aed06ede267be4bb9c1fd69762d11f054e4af68936aaf2f23506e585b676",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/treesitter.lua": {
+      "filePath": ".config/nvim/lua/plugins/treesitter.lua",
+      "contentHash": "3f6db5ebc84dc1dd69f6292de14a699aa88680ab08ce4e854edd4ded0d1535e0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/lua/plugins/yazi.lua": {
+      "filePath": ".config/nvim/lua/plugins/yazi.lua",
+      "contentHash": "f20b77e4dfd4cc5494e811cf0900f3ad9f292114d6f8c5f641de0ef2111b96c7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    ".config/nvim/README.md": {
+      "filePath": ".config/nvim/README.md",
+      "contentHash": "9969960a98455417b5f3781772f01528a64bb450e5f9db57734713ae920bd84a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    ".config/nvim/stylua.toml": {
+      "filePath": ".config/nvim/stylua.toml",
+      "contentHash": "59841fbcee7b707144c6a470e96e96e96062d7a59d2e45bac445984d863e1af2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/flavors/moonfly.yazi/flavor.toml": {
+      "filePath": ".config/yazi/flavors/moonfly.yazi/flavor.toml",
+      "contentHash": "d7adece5f22b7f40d281de6386458a7b6226f1267e1d3a6021d1190edf98d068",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 782,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/flavors/moonfly.yazi/LICENSE-tmtheme": {
+      "filePath": ".config/yazi/flavors/moonfly.yazi/LICENSE-tmtheme",
+      "contentHash": "60d218c6124be1fcc1ac852357ced949784b9bed9d340bc8df51c46cafdff42c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/flavors/moonfly.yazi/README.md": {
+      "filePath": ".config/yazi/flavors/moonfly.yazi/README.md",
+      "contentHash": "995eb65fd6a95e7ad2e0e20d340d603951d818fc462b91b5b986fc7c70f41f50",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/flavors/moonfly.yazi/tmtheme.xml": {
+      "filePath": ".config/yazi/flavors/moonfly.yazi/tmtheme.xml",
+      "contentHash": "b936daf0d28f428c0962e3b537d8e9f8c0d7afc36098ef3e95244d9aef379848",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 800,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/init.lua": {
+      "filePath": ".config/yazi/init.lua",
+      "contentHash": "559ac3755cf6014c692ecbb6fe547a0faad984693cdd8feb3a2e3a478cd6f1fe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/keymap.toml": {
+      "filePath": ".config/yazi/keymap.toml",
+      "contentHash": "c0bd1d4ac87f5087ea3d4ccad523bc22d39c35dedbfe47332e031ff99382bcc3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 392,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/keymap.toml-1751179307751122": {
+      "filePath": ".config/yazi/keymap.toml-1751179307751122",
+      "contentHash": "bb182dfebb6d7d24302e3158c48b69ad68ecc6465ce51eaea875b146143611a4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 372,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/keymap.toml-1751250559144731": {
+      "filePath": ".config/yazi/keymap.toml-1751250559144731",
+      "contentHash": "bb182dfebb6d7d24302e3158c48b69ad68ecc6465ce51eaea875b146143611a4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 372,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/package.toml": {
+      "filePath": ".config/yazi/package.toml",
+      "contentHash": "1432209f1596ee12b7c92d0b4c4b113d79c55e75ce855a58f786d5daee3e05e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/plugins/bookmarks.yazi/main.lua": {
+      "filePath": ".config/yazi/plugins/bookmarks.yazi/main.lua",
+      "contentHash": "0ae3079dbcddd6da55a9a071f93fd63af12736b0cbdefa5c68c63ada3bf638bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 384,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/plugins/bookmarks.yazi/README.md": {
+      "filePath": ".config/yazi/plugins/bookmarks.yazi/README.md",
+      "contentHash": "0bbc9d095a33e3daddcb60dbe8b5e321c80d4a5b8e6b5c3bbc52e75ed56b6780",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/plugins/git.yazi/main.lua": {
+      "filePath": ".config/yazi/plugins/git.yazi/main.lua",
+      "contentHash": "e14d5531ca29f6ceb2c7df711a5dae432948bf667cae6ed2b249a18a88c3bafa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 229,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/plugins/git.yazi/README.md": {
+      "filePath": ".config/yazi/plugins/git.yazi/README.md",
+      "contentHash": "8dcadfb6c57f6920ca075bbd3bf030cf8599a8e11d982e24e794c17a8cf9513a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/theme.toml": {
+      "filePath": ".config/yazi/theme.toml",
+      "contentHash": "ff0e5a2e10537a46cc5437817068e1e642a88d1abff86cb41571c854c18fb50b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/yazi.toml": {
+      "filePath": ".config/yazi/yazi.toml",
+      "contentHash": "d6851bd4167eed6f1773c897ddb6103c95b889201982d8b4d3ad769c9be3b9a9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 232,
+      "hasStructuralAnalysis": true
+    },
+    ".config/yazi/yazi.toml-1751179307747254": {
+      "filePath": ".config/yazi/yazi.toml-1751179307747254",
+      "contentHash": "8bacfe1642e3ecf7826d95e9d1b162df4855c4af92beacfcae2a595f2e8ea0c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 232,
+      "hasStructuralAnalysis": false
+    },
+    ".config/yazi/yazi.toml-1751250559140728": {
+      "filePath": ".config/yazi/yazi.toml-1751250559140728",
+      "contentHash": "8bacfe1642e3ecf7826d95e9d1b162df4855c4af92beacfcae2a595f2e8ea0c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 232,
+      "hasStructuralAnalysis": false
+    },
+    ".tmux.conf": {
+      "filePath": ".tmux.conf",
+      "contentHash": "4377b5ffbf408777cdce6a2d733133ce9160646bb13b71e058800a121597d1a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 109,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "a1cf6ccd2e96ac91cabd128e92d3a15492c725fb52071df115f5b48dbcd0f601",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": false
+    },
+    ".zshrc": {
+      "filePath": ".zshrc",
+      "contentHash": "514ede2eb53f67257039cc9562e76fe66534856f27bc6fb57ce8d07c89173915",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 116,
+      "hasStructuralAnalysis": false
+    },
+    "Brewfile": {
+      "filePath": "Brewfile",
+      "contentHash": "04e14b17c39d3f7280487e9e611fd5c2149f80a89681f95ec82225c1289fb20a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": false
+    },
+    "config.json": {
+      "filePath": "config.json",
+      "contentHash": "7777a9ea8af02ac7308a5597f05181f4e89d4b41b1faa4b357f206668d57a6ee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "env.secrets.age": {
+      "filePath": "env.secrets.age",
+      "contentHash": "f080f7beb606b9c3694b761cc6c83c0c697e41f4a484fbf65652edc7ac646389",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "GEMINI.md": {
+      "filePath": "GEMINI.md",
+      "contentHash": "b1b4f904405aa738bef21e09afbc4c4e5232598e64570464b705daf6d1c84ad2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "ghostty/config": {
+      "filePath": "ghostty/config",
+      "contentHash": "6cca5b9519f34c96ad8847710d1a00eb07342b68c03147a230190217d73e7624",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    "glance/glance.yml": {
+      "filePath": "glance/glance.yml",
+      "contentHash": "3558cf1cb2194527ddd4afee807fd1829061810258df1d2dcda35ef0f95b4325",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 131,
+      "hasStructuralAnalysis": true
+    },
+    "glance/widgets/github-trending.yml": {
+      "filePath": "glance/widgets/github-trending.yml",
+      "contentHash": "8b3babde1e3163ece2e9c87ce99170c506e0c4c44d7e46578caaa2a7186f8dc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "glance/widgets/qbittorrent-pt.yml": {
+      "filePath": "glance/widgets/qbittorrent-pt.yml",
+      "contentHash": "17a6d4710a850f005381e82a0db0e52884508a089f90d858ffe67c2542c01783",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 188,
+      "hasStructuralAnalysis": true
+    },
+    "glance/widgets/radarr.yml": {
+      "filePath": "glance/widgets/radarr.yml",
+      "contentHash": "8cd205ec9a7576bdb1e65a48d9af45023b47fe18ce4a6571030ccfa2abbd6c44",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 450,
+      "hasStructuralAnalysis": true
+    },
+    "glance/widgets/weather.yml": {
+      "filePath": "glance/widgets/weather.yml",
+      "contentHash": "3d21c94a9622e70b7632237c93d986c5030212403bbbe480e08535a579a68eae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 218,
+      "hasStructuralAnalysis": true
+    },
+    "kitty/kitty.conf": {
+      "filePath": "kitty/kitty.conf",
+      "contentHash": "55246648b1b3a08edad3aa929ec7c581d334c1ff99dd00687f96d5ba67d09da3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2458,
+      "hasStructuralAnalysis": false
+    },
+    "odpt.http": {
+      "filePath": "odpt.http",
+      "contentHash": "429ed70f74de41cf395de7acc5a1a2921fd5fd6601e3a97b2d2608735ec7f16b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "opencode/env.example": {
+      "filePath": "opencode/env.example",
+      "contentHash": "171b8a2ac5ca76706d642c0af61a731b6095efb9ac8b45eddf72bef35a8e2f0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "opencode/opencode.json": {
+      "filePath": "opencode/opencode.json",
+      "contentHash": "de87ea0f0f38598f162cc67de149593431353dd00354d282c9c8861328667a87",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/opencode.json.tui-migration.bak": {
+      "filePath": "opencode/opencode.json.tui-migration.bak",
+      "contentHash": "30b3e6ee547e08d34d52f4a14e60ef662d53994f99abb71ec0352cf12cfb6c5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "opencode/plugin/notify.ts": {
+      "filePath": "opencode/plugin/notify.ts",
+      "contentHash": "48db7a34274b3e722c521bdb8e1cfdeb0e5f2e9c867b2d519af11d656930216e",
+      "functions": [
+        {
+          "name": "Notify",
+          "params": [
+            "{ $ }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@opencode-ai/plugin",
+          "specifiers": [
+            "Plugin"
+          ]
+        }
+      ],
+      "exports": [
+        "Notify"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/context7/library-registry.md": {
+      "filePath": "opencode/skills/context7/library-registry.md",
+      "contentHash": "7dc406da783fafe9d27a98219f407ed8d6d17de48291b1cabae5423233cbfd7a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 291,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/context7/navigation.md": {
+      "filePath": "opencode/skills/context7/navigation.md",
+      "contentHash": "fb833c7d11eb0af2a85649e47540e55dd5e2352cfb107688c63f57ca46b6c578",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/context7/README.md": {
+      "filePath": "opencode/skills/context7/README.md",
+      "contentHash": "0983d8f56b6578ee289ff2e5a9b326f8095d6850377b3c041a75b90fc916a560",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 103,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/context7/SKILL.md": {
+      "filePath": "opencode/skills/context7/SKILL.md",
+      "contentHash": "03c54428be33f4533d9cee60a25723c8f20b43e869b9eba7cafde8a1c1c471ab",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 85,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/task-management/router.sh": {
+      "filePath": "opencode/skills/task-management/router.sh",
+      "contentHash": "4dffe81c1a5229e30d2b9a9443a3c516144f0ebf09c263e44021b52e37bfe95e",
+      "functions": [
+        {
+          "name": "show_help",
+          "params": [],
+          "exported": false,
+          "lineCount": 49
+        },
+        {
+          "name": "find_project_root",
+          "params": [],
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 109,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/task-management/scripts/task-cli.ts": {
+      "filePath": "opencode/skills/task-management/scripts/task-cli.ts",
+      "contentHash": "f9729ce9e5c92a1b4e9e4df01557d0ce83406e2d443ec85725e1c0684f48ee39",
+      "functions": [
+        {
+          "name": "findProjectRoot",
+          "params": [],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "getFeatureDirs",
+          "params": [],
+          "returnType": "string[]",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "loadTask",
+          "params": [
+            "feature"
+          ],
+          "returnType": "Task | null",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "loadSubtasks",
+          "params": [
+            "feature"
+          ],
+          "returnType": "Subtask[]",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "saveSubtask",
+          "params": [
+            "feature",
+            "subtask"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "saveTask",
+          "params": [
+            "feature",
+            "task"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "cmdStatus",
+          "params": [
+            "feature"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 33
+        },
+        {
+          "name": "cmdNext",
+          "params": [
+            "feature"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "cmdParallel",
+          "params": [
+            "feature"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "cmdDeps",
+          "params": [
+            "feature",
+            "seq"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 39
+        },
+        {
+          "name": "cmdBlocked",
+          "params": [
+            "feature"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "cmdComplete",
+          "params": [
+            "feature",
+            "seq",
+            "summary"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 35
+        },
+        {
+          "name": "cmdValidate",
+          "params": [
+            "feature"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 198
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 554,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/skills/task-management/SKILL.md": {
+      "filePath": "opencode/skills/task-management/SKILL.md",
+      "contentHash": "d0b914729a2fc38169fd26858a7d8a7d1ff6fc9c3ac14e37dbe8f18d49ceb28c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 400,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/themes/moonfly.json": {
+      "filePath": "opencode/themes/moonfly.json",
+      "contentHash": "0ba7e936734afc394e9df094aa7f5fa3cd379e17401759ab699d9f40582a8a59",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 249,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/tool/env/index.ts": {
+      "filePath": "opencode/tool/env/index.ts",
+      "contentHash": "cd367d24fafbeba15a9018b04c09b4dbf5b015a583cc4b7ec68694051d3cfc84",
+      "functions": [
+        {
+          "name": "loadEnvVariables",
+          "params": [
+            "config"
+          ],
+          "returnType": "Promise<Record<string, string>>",
+          "exported": true,
+          "lineCount": 49
+        },
+        {
+          "name": "getEnvVariable",
+          "params": [
+            "varName",
+            "config"
+          ],
+          "returnType": "Promise<string | null>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "getRequiredEnvVariable",
+          "params": [
+            "varName",
+            "config"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "getRequiredEnvVariables",
+          "params": [
+            "varNames",
+            "config"
+          ],
+          "returnType": "Promise<Record<string, string>>",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "getApiKey",
+          "params": [
+            "apiKeyName",
+            "config"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "fs/promises",
+          "specifiers": [
+            "readFile"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "resolve"
+          ]
+        }
+      ],
+      "exports": [
+        "loadEnvVariables",
+        "getEnvVariable",
+        "getRequiredEnvVariable",
+        "getRequiredEnvVariables",
+        "getApiKey"
+      ],
+      "totalLines": 168,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/tool/gemini/index.ts": {
+      "filePath": "opencode/tool/gemini/index.ts",
+      "contentHash": "4178de9fdfbfe87002ede61bd9993c089dd3241bdf7f1da5b770243024162bf8",
+      "functions": [
+        {
+          "name": "isTestMode",
+          "params": [],
+          "returnType": "boolean",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "getGeminiApiKey",
+          "params": [],
+          "returnType": "Promise<string>",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "parseImageInput",
+          "params": [
+            "input"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "ensureDirectoryExists",
+          "params": [
+            "dirPath"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "getDateBasedPath",
+          "params": [
+            "baseDir"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "getUniqueFilename",
+          "params": [
+            "directory",
+            "baseName",
+            "extension",
+            "isEdit"
+          ],
+          "returnType": "Promise<string>",
+          "exported": false,
+          "lineCount": 29
+        },
+        {
+          "name": "generateImage",
+          "params": [
+            "prompt",
+            "config"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 87
+        },
+        {
+          "name": "editImage",
+          "params": [
+            "imagePath",
+            "prompt",
+            "config"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 96
+        },
+        {
+          "name": "analyzeImage",
+          "params": [
+            "imagePath",
+            "question"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@opencode-ai/plugin/tool",
+          "specifiers": [
+            "tool"
+          ]
+        },
+        {
+          "source": "fs/promises",
+          "specifiers": [
+            "mkdir"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "join",
+            "dirname",
+            "basename",
+            "extname",
+            "resolve"
+          ]
+        },
+        {
+          "source": "../env",
+          "specifiers": [
+            "getApiKey"
+          ]
+        }
+      ],
+      "exports": [
+        "generateImage",
+        "editImage",
+        "analyzeImage",
+        "generate",
+        "edit",
+        "analyze"
+      ],
+      "totalLines": 379,
+      "hasStructuralAnalysis": true
+    },
+    "opencode/tui.json": {
+      "filePath": "opencode/tui.json",
+      "contentHash": "e98312d018502697988367408704f93223eefddc6fe55a07a6bce9b98d215eba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "setup.sh": {
+      "filePath": "setup.sh",
+      "contentHash": "11e6ae1be453e921924c3ea288886085adbfc25b03fba1517672bdce206c1c7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    "starship.toml": {
+      "filePath": "starship.toml",
+      "contentHash": "a0fcdd498d1035b5841fd06ded51cc8e5f986a5718a4ce5147173dce70b3360b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "tmux-sessionizer.conf": {
+      "filePath": "tmux-sessionizer.conf",
+      "contentHash": "c01fcb3154d7babb888b05c0e3ec96f4a97704a717a149e41d34369d0cf926d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

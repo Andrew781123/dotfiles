@@ -1,0 +1,16 @@
+.collapsible-container:not(.container-expanded) > .collapsible-item {
+    display: block;
+}
+
+.collapsible-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.expand-toggle-button {
+    display: none;
+}
+
+html {
+    background-color: lime !important;
+}

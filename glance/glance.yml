@@ -1,5 +1,37 @@
+theme:
+  custom-css-file: /assets/user.css
+
 pages:
   - name: Home
+    width: wide
+    head-widgets:
+      - type: videos
+        style: horizontal-cards
+        channels:
+          - UCsBjURrPoezykLs9EqgamOA # Fireship
+          - UCBJycsmduvYEL83R_U4JriQ # MKBHD
+          - UCbRP3c757lWg9M-U7TyEkXA # Theo
+          - UCh_KRmXM4RiQFvOBBDpvC6Q # 志豪Live Show
+          - UCr9O9uLhxnB5GQenVseEAnA # HEBEFACE
+          - UCj1VqrHhDte54oLgPG4xpuQ # Stuff Made Here
+          - UCdWNwPuaS1o2dIzugNMXWtw # 我要做富翁
+          - UCiJnCs2K5gP-DXnMxlstC9A # 毛記電視
+          - UC83EeYmQyroJD61psI0gqyQ # Jimpae 占皮
+          - UC-eoXVXWKQ3T7UeUbSPHRvg # Uwants 遊戲講
+          - UCZGVB6g74LXWtkR3fX50ykg # Edwin H.
+          - UCUyeluBRhGPCW4rPe_UvBZQ # The PrimeTime
+          - UCbCjnhRj4AC2H1N9BKj-6NA # 01檔案
+          - UCajzkk_Rxm4kzBW7HTT4JXg # 格物 Blank in Blank
+          - UC8ENHE5xdFSwx71u3fDH5Xw # ThePrimeagen
+          - UC1733iBvNpXIscZk4QnfYBw # WunderTech
+          - UCD5Lx-3KCYZzCzGF2A60STg # Bowtie
+          - UC6biysICWOJ-C3P4Tyeggzg # Low Level
+          - UChk6TQce1EJMn6_liKdHDog # ThePrimeagenHighlights
+          - UCAlVuubC3GE6kFFeNBEkoUQ # 危險人物2.0
+          - UCYeiozh-4QwuC1sjgCmB92w # DevOps Toolbox
+          - UCej-p3P_4xe5fRPKATsOk9A # 胡‧說樓市
+          - UCB3pBfnruGVgbP1r5Ya2CEg # 叉雞
+
     columns:
       - size: small
         widgets:
@@ -7,7 +39,6 @@ pages:
             widgets:
               - type: clock
                 hour-format: 24h
-
               - type: calendar
                 first-day-of-week: monday
 
@@ -30,6 +61,11 @@ pages:
             widgets:
               - type: group
                 widgets:
+                  - type: rss
+                    feeds:
+                      - url: https://blog.google/technology/ai/rss/
+                      - url: https://vercel.com/blog/feed
+                      - url: https://martinfowler.com/feed.atom
                   - type: hacker-news
                   - type: lobsters
                     tags:
@@ -47,43 +83,61 @@ pages:
                       - android
                       - css
 
-              - type: group
-                title: "Engineering & AI"
-                widgets:
-                  - type: rss
-                    feeds:
-                      - url: https://blog.google/technology/ai/rss/
-                      - url: https://vercel.com/blog/feed
-                      - url: https://www.builder.io/blog/feed.xml
-                      - url: https://martinfowler.com/feed.atom
+              - type: bookmarks
+                groups:
+                  # - title: Homelab
+                  #   links:
+                  #     - title: pve
+                  #       url: pve.11230807.xyz
+                  #     - title: pihole
+                  #       url: pihole.11230807.xyz
+                  #     - title: Jellyfin
+                  #       url: jellyfin.11230807.xyz
+                  #     - title: Radarr
+                  #       url: radarr.11230807.xyz
+                  #     - title: Sonarr
+                  #       url: sonarr.11230807.xyz
+                  #     - title: Lidarr
+                  #       url: lidarr.11230807.xyz
+                  #     - title: Bazarr
+                  #       url: bazarr.11230807.xyz
+                  #     - title: Seerr
+                  #       url: seerr.11230807.xyz
+                  #     - title: qBittorrent
+                  #       url: qbtpt.11230807.xyz
+                  #     - title: Navidrome
+                  #       url: music.11230807.xyz
+                  - title: Repos
+                    links:
+                      - title: andrej-karpathy-skills
+                        url: https://github.com/multica-ai/andrej-karpathy-skills
+                        description: CLAUDE.md that improves Claude Code behavior based on Karpathy's LLM coding observations
+                      - title: academic-research-skills
+                        url: https://github.com/Imbad0202/academic-research-skills
+                        description: Comprehensive Claude Code skills suite for the full academic research pipeline
+                      - title: graphify
+                        url: https://github.com/safishamsi/graphify
+                        description: Turn any codebase into a queryable knowledge graph for AI coding assistants
+                      - title: multica
+                        url: https://github.com/multica-ai/multica
+                        description: Open-source managed agents platform to assign tasks and track progress
+                      - title: CLI-Anything
+                        url: https://github.com/HKUDS/CLI-Anything
+                        description: Makes any software agent-native by auto-generating CLI harnesses for AI agents
+                      - title: streambert
+                        url: https://github.com/truelockmc/streambert
+                        description: Cross-platform Electron app to stream and download movies, series, and anime
+                      - title: pi
+                        url: https://github.com/earendil-works/pi
+                        description: AI agent toolkit with coding agent CLI, unified LLM API, and TUI libraries
+                      - title: career-ops
+                        url: https://github.com/santifer/career-ops
+                        description: AI-powered job search system with 14 skill modes and PDF generation
+                      - title: awesome-ai-research-writing
+                        url: https://github.com/Leey21/awesome-ai-research-writing
+                        description: Curated collection of prompts and agent skills for AI-assisted academic writing
 
-          - type: videos
-            style: grid-cards
-            collapse-after-rows: 3
-            channels:
-              - UCsBjURrPoezykLs9EqgamOA # Fireship
-              - UCBJycsmduvYEL83R_U4JriQ # MKBHD
-              - UCbRP3c757lWg9M-U7TyEkXA # Theo
-              - UCh_KRmXM4RiQFvOBBDpvC6Q # 志豪Live Show
-              - UCr9O9uLhxnB5GQenVseEAnA # HEBEFACE
-              - UCj1VqrHhDte54oLgPG4xpuQ # Stuff Made Here
-              - UCdWNwPuaS1o2dIzugNMXWtw # 我要做富翁
-              - UCiJnCs2K5gP-DXnMxlstC9A # 毛記電視
-              - UC83EeYmQyroJD61psI0gqyQ # Jimpae 占皮
-              - UC-eoXVXWKQ3T7UeUbSPHRvg # Uwants 遊戲講
-              - UCZGVB6g74LXWtkR3fX50ykg # Edwin H.
-              - UCUyeluBRhGPCW4rPe_UvBZQ # The PrimeTime
-              - UCbCjnhRj4AC2H1N9BKj-6NA # 01檔案
-              - UCajzkk_Rxm4kzBW7HTT4JXg # 格物 Blank in Blank
-              - UC8ENHE5xdFSwx71u3fDH5Xw # ThePrimeagen
-              - UC1733iBvNpXIscZk4QnfYBw # WunderTech
-              - UCD5Lx-3KCYZzCzGF2A60STg # Bowtie
-              - UC6biysICWOJ-C3P4Tyeggzg # Low Level
-              - UChk6TQce1EJMn6_liKdHDog # ThePrimeagenHighlights
-              - UCAlVuubC3GE6kFFeNBEkoUQ # 危險人物2.0
-              - UCYeiozh-4QwuC1sjgCmB92w # DevOps Toolbox
-              - UCej-p3P_4xe5fRPKATsOk9A # 胡‧說樓市
-              - UCB3pBfnruGVgbP1r5Ya2CEg # 叉雞
+              - $include: widgets/github-trending.yml
 
       - size: small
         widgets:
@@ -104,6 +158,7 @@ pages:
 
           - type: releases
             cache: 1d
+            token: ${GITHUB_TOKEN}
             repositories:
               - neovim/neovim
               - expo/expo
@@ -113,13 +168,12 @@ pages:
               - facebook/react
               - jellyfin/jellyfin
               - Sonarr/Sonarr
-              - seerr-team-seerr
+              - seerr-team/seerr
               - Radarr/Radarr
               - lidarr/Lidarr
-              - morpheus655/bazarr
+              - morpheus65535/bazarr
               - pi-hole/pi-hole
-              - glance-cgi/glance
-              - pulse-navbar/pulse
+              - glanceapp/glance
 
   # - name: Homelab
   #   columns:
