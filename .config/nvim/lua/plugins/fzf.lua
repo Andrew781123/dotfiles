@@ -63,16 +63,16 @@ return {
     }
   end,
   keys = {
-    { "<leader>fF", LazyVim.pick("files", { root = true, hidden = true }), desc = "Find Files (Root Dir)" },
+    { "<leader>fF", LazyVim.pick("files", { root = true, hidden = false }), desc = "Find Files (Root Dir)" },
     {
       "<leader>ff",
       function()
-        require("fzf-lua").files({ cmd = "echo .env && fd --type f --hidden", hidden = true })
+        require("fzf-lua").files({ cmd = "echo .env && fd --type f --hidden", hidden = false })
       end,
       desc = "Find Files (cwd, custom cmd)",
     },
-    { "<leader>fS", LazyVim.pick("live_grep", { hidden = true }), desc = "Grep (root dir)" },
-    { "<leader>fs", LazyVim.pick("live_grep", { root = false, hidden = true }), desc = "Grep (cwd)" },
+    { "<leader>fS", LazyVim.pick("live_grep", { hidden = false }), desc = "Grep (root dir)" },
+    { "<leader>fs", LazyVim.pick("live_grep", { root = false, hidden = false }), desc = "Grep (cwd)" },
     { "<leader>rff", "<cmd>FzfLua resume<cr>", desc = "Resume" },
     {
       "<leader>gb",
