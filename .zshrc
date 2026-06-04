@@ -1,7 +1,6 @@
 
 # Environment variables
 export EDITOR=vim
-export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PNPM_HOME="/Users/andrew/Library/pnpm"
 export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp,server/generated} --type f"
@@ -113,3 +112,5 @@ eval "$(zoxide init zsh)"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
