@@ -23,10 +23,10 @@ return {
 
     vim.keymap.set({ "n", "x" }, "go", function()
       return require("opencode").operator("@this ")
-    end, { desc = "Add range to opencode", expr = true })
+    end, { desc = "Append range to OpenCode", expr = true })
     vim.keymap.set("n", "goo", function()
       return require("opencode").operator("@this ") .. "_"
-    end, { desc = "Add line to opencode", expr = true })
+    end, { desc = "Append line to OpenCode", expr = true })
     vim.keymap.set("n", "gob", function()
       return require("opencode").operator("@buffer ") .. "_"
     end, { desc = "Add buffer to opencode", expr = true })

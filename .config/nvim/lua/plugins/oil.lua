@@ -33,6 +33,13 @@ return {
   "stevearc/oil.nvim",
   keys = {
     { "<leader>e", "<cmd>Oil<CR>", desc = "Explorer" },
+    {
+      "<leader>E",
+      function()
+        require("oil").open(vim.fn.getcwd())
+      end,
+      desc = "Explorer (cwd)",
+    },
   },
   opts = {
     view_options = {
