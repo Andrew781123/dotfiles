@@ -13,6 +13,12 @@ return {
     config.defaults.keymap.builtin["<c-d>"] = "preview-page-down"
     config.defaults.keymap.builtin["<c-u>"] = "preview-page-up"
 
+    -- Remap fzf-lua files toggles to avoid Alt-* conflict with Aerospace
+    config.defaults.actions.files["ctrl-h"] = config.defaults.actions.files["alt-h"]
+    config.defaults.actions.files["ctrl-i"] = config.defaults.actions.files["alt-i"]
+    config.defaults.actions.files["alt-h"] = false
+    config.defaults.actions.files["alt-i"] = false
+
     return {
       ui_select = function(fzf_opts, items)
         return vim.tbl_deep_extend("force", fzf_opts, {
@@ -48,9 +54,13 @@ return {
       files = {
         cwd_prompt = false,
         hidden = true,
+        fd_opts = "--color=never --type f --hidden --exclude .git",
       },
       git_status = {
         previewer = false, -- Disable preview to avoid assertion error
+      },
+      grep = {
+        rg_opts = "--color=never --column --line-number --no-heading --smart-case --hidden --glob '!.git'",
       },
       winopts = {
         fullscreen = true,
@@ -63,16 +73,16 @@ return {
     }
   end,
   keys = {
-    { "<leader>fF", LazyVim.pick("files", { root = true, hidden = false }), desc = "Find Files (Root Dir)" },
+    { "<leader>fF", LazyVim.pick("files", { root = true }), desc = "Find Files (Root Dir)" },
     {
       "<leader>ff",
       function()
-        require("fzf-lua").files({ cmd = "echo .env && fd --type f --hidden", hidden = false })
+        require("fzf-lua").files({ cwd = vim.loop.cwd() })
       end,
-      desc = "Find Files (cwd, custom cmd)",
+      desc = "Find Files (cwd)",
     },
-    { "<leader>fS", LazyVim.pick("live_grep", { hidden = false }), desc = "Grep (root dir)" },
-    { "<leader>fs", LazyVim.pick("live_grep", { root = false, hidden = false }), desc = "Grep (cwd)" },
+    { "<leader>fS", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
+    { "<leader>fs", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
     { "<leader>rff", "<cmd>FzfLua resume<cr>", desc = "Resume" },
     {
       "<leader>gb",
