@@ -1,0 +1,8 @@
+[post-start]
+copy = "wt step copy-ignored"
+env = "if [ -f {{ primary_worktree_path }}/.env ]; then cp {{ primary_worktree_path }}/.env {{ worktree_path }}/.env; fi"
+local = "if [ -d {{ primary_worktree_path }}/local ]; then cp -R {{ primary_worktree_path }}/local/. {{ worktree_path }}/local; fi"
+tmux = "tmux new-session -d -s {{ repo }}.{{ branch | sanitize }} -c {{ worktree_path }}"
+
+[post-remove]
+tmux = "tmux kill-session -t {{ repo }}.{{ branch | sanitize }} 2>/dev/null || true"
