@@ -4,6 +4,9 @@ env = "if [ -f {{ primary_worktree_path }}/.env ]; then cp {{ primary_worktree_p
 local = "if [ -d {{ primary_worktree_path }}/local ]; then cp -R {{ primary_worktree_path }}/local/. {{ worktree_path }}/local; fi"
 tmux = """session={{ (repo ~ "." ~ (branch | sanitize)) | replace(".", "_") }}; tmux new-session -d -s "$session" -c {{ worktree_path }} && tmux new-window -t "=$session" -c {{ worktree_path }} && tmux split-window -t "=$session:1" -h -c {{ worktree_path }} && tmux split-window -t "=$session:1" -v -c {{ worktree_path }} && tmux split-window -t "=$session:1" -v -c {{ worktree_path }} && tmux select-layout -t "=$session:1" tiled"""
 
+[post-switch]
+tmux = """session={{ (repo ~ "." ~ (branch | sanitize)) | replace(".", "_") }}; for t in $(tmux list-clients -F '#{client_tty}'); do tmux switch-client -t "=$session" -c "$t" || true; done"""
+
 [post-remove]
 tmux = """session={{ (repo ~ "." ~ (branch | sanitize)) | replace(".", "_") }}; tmux kill-session -t "=$session" 2>/dev/null || true"""
 
