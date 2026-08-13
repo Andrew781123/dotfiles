@@ -1,7 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
   opts = function()
-    local icons = require("lazyvim.config").icons
     return {
       options = {
         always_divide_middle = false,
@@ -22,17 +21,14 @@ return {
           { "branch" },
           {
             "diagnostics",
-            always_visible = true,
-            sources = { "nvim_lsp" },
+            -- always_visible = true,
+            sources = { "nvim_diagnostic" },
             sections = { "error", "warn" },
           },
+          -- "filetype",
         },
         lualine_y = {},
-        lualine_z = {
-          {
-            require("opencode").statusline,
-          },
-        },
+        lualine_z = {},
       },
     }
   end,

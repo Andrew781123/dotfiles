@@ -3,7 +3,7 @@
   "plugin": [
     "opencode-gemini-auth@latest",
     "@mohak34/opencode-notifier@latest",
-    "@dietrichgebert/ponytail@4.8.4"
+    "@dietrichgebert/ponytail@latest"
   ],
   "default_agent": "Plan"
 }

@@ -7,6 +7,11 @@ local keymap = vim.keymap
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+-- git blame (moved from LazyVim default <leader>gb to free that for fzf git_branches)
+keymap.set("n", "<leader>gB", function()
+  require("gitsigns").blame_line({ full = true })
+end, { desc = "Git Blame Line" })
+
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 

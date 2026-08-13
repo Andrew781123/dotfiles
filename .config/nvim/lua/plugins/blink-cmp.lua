@@ -1,6 +1,6 @@
 return {
   "saghen/blink.cmp",
-  lazy = true,
+  event = { "InsertEnter", "CmdlineEnter" },
   dependencies = { "saghen/blink.compat" },
   opts = function(_, opts)
     opts.signature = { enabled = true }
