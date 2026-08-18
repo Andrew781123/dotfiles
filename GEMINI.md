@@ -1,1 +1,0 @@
-- The user prefers the "pro" model.
