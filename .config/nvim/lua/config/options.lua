@@ -27,6 +27,8 @@ opt.termguicolors = true
 
 vim.lsp.set_log_level("off")
 
+vim.g.snippet_engine = "vim"
+
 vim.diagnostic.config({
   virtual_text = false,
   severity_sort = true,

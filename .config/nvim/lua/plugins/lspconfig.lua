@@ -6,8 +6,10 @@ return {
   },
   disabled = false,
   opts = function(_, opts)
-    local keys = require("lazyvim.plugins.lsp.keymaps").get()
-    keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename" }
+    opts.servers["*"] = opts.servers["*"] or {}
+    local keys = opts.servers["*"].keys or {}
+
+    keys[#keys + 1] = { "<leader>rn", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
     keys[#keys + 1] = {
       "<leader>cu",
       function()
@@ -36,6 +38,8 @@ return {
       desc = "Fix All ESLint Issues",
     }
 
+    opts.servers["*"].keys = keys
+
     opts.diagnostics = {
       virtual_text = false,
       signs = {
@@ -52,7 +56,7 @@ return {
     opts.inlay_hints = {
       enabled = false,
     }
-    opts.servers = {
+    opts.servers = vim.tbl_extend("force", opts.servers or {}, {
       tailwindcss = {
         -- exclude a filetype from the default_config
         filetypes_exclude = { "markdown" },
@@ -107,7 +111,7 @@ return {
           client.server_capabilities.semanticTokensProvider = nil
         end,
       },
-    }
+    })
 
     opts.setup = {
       eslint = function()

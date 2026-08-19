@@ -1,6 +1,5 @@
 
 # Environment variables
-export EDITOR=vim
 export BUN_INSTALL="$HOME/.bun"
 export PNPM_HOME="/Users/andrew/Library/pnpm"
 export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp,server/generated} --type f"
@@ -77,22 +76,7 @@ if [ -f "$HOME/.dotfiles/env.secrets" ]; then
   source "$HOME/.dotfiles/env.secrets"
 fi
 
-# Aider configuration
-export AIDER_NO_AUTO_COMMITS=1
-export AIDER_CODE_THEME="nord-darker"
-# export AIDER_DEEPSEEK=1
-# export AIDER_AZURE=1
-export AIDER_MODEL="azure/o3-mini"
-export AIDER_VIM=1
-export AZURE_API_VERSION=2024-12-01-preview
-export AZURE_API_BASE=https://andrewmakeapp1123.openai.azure.com/
-
-# Avante configuration
-export GOOGLE_CLOUD_PROJECT="gen-lang-client-0997506155"
-
-
 export EDITOR='nvim'
-
 
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"

@@ -1,9 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "minimax/MiniMax-M3",
   "plugin": [
     "opencode-gemini-auth@latest",
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest"
   ],
-  "default_agent": "Plan"
+  "default_agent": "Plan",
+  "permission": {
+    "external_directory": {
+      "/tmp/**": "allow"
+    }
+  }
 }
