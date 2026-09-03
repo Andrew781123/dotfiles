@@ -2,10 +2,17 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "minimax/MiniMax-M3",
   "plugin": [
-    "opencode-gemini-auth@latest",
     "@mohak34/opencode-notifier@latest",
-    "@dietrichgebert/ponytail@latest"
+    "@dietrichgebert/ponytail@latest",
+    "commandcode-go-opencode-provider@latest"
   ],
+  "provider": {
+    "commandcode": {
+      "npm": "commandcode-go-opencode-provider",
+      "name": "Command Code",
+      "env": ["COMMANDCODE_API_KEY"]
+    }
+  },
   "default_agent": "Plan",
   "permission": {
     "external_directory": {
