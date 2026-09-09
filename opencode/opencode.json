@@ -4,7 +4,7 @@
   "plugin": [
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest",
-    "commandcode-go-opencode-provider@latest"
+    "opencode-cmd-provider"
   ],
   "provider": {
     "commandcode": {
