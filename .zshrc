@@ -29,6 +29,7 @@ alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 alias y="yazi"
 alias oc="opencode --port"
+alias wm='workmux'
 eval $(thefuck --alias)
 
 # Git
@@ -104,3 +105,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export NVM_DIR="$HOME/.nvm"
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+command -v workmux >/dev/null 2>&1 && eval "$(workmux completions zsh)"
