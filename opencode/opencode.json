@@ -1,6 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "minimax/MiniMax-M3",
+  "model": "opencode-go/deepseek-v4.1-flash",
+  "agent": {
+    "compaction": {
+      "model": "opencode-go/deepseek-v4.1-flash"
+    }
+  },
   "plugin": [
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest",
@@ -13,10 +18,20 @@
       "env": ["COMMANDCODE_API_KEY"]
     }
   },
-  "default_agent": "Plan",
+  "default_agent": "build",
   "permission": {
     "external_directory": {
       "/tmp/**": "allow"
+    }
+  },
+  "mcp": {
+    "Neon": {
+      "type": "remote",
+      "url": "https://mcp.neon.tech/mcp",
+      "enabled": false,
+      "headers": {
+        "Authorization": "Bearer napi_furp1uzgo92f6uedbp8v4rbmgg31yyfky2vmznsgn8r1s4641zposp3jl0cey650"
+      }
     }
   }
 }

@@ -3,3 +3,4 @@
 env.secrets
 key.txt
 .env
+.tmux.local

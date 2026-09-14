@@ -1,0 +1,19 @@
+agent: opencode
+nerdfont: true
+mode: session
+
+files:
+  copy:
+    - .env
+    - local
+
+windows:
+  - {}
+  - panes:
+      - command: opencode
+        focus: true
+      - split: horizontal
+      - split: vertical
+        target: 0
+      - split: vertical
+        target: 1

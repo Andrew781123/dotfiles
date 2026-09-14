@@ -1,0 +1,4 @@
+setenv -g SHORTCUT_J ~/repos/princess-dating
+setenv -g SHORTCUT_J_UPPER ~/neorg
+setenv -g SHORTCUT_K ~/repos/princess-cms
+setenv -g SHORTCUT_L ~/.dotfiles

@@ -1,10 +1,81 @@
 {
-  "disableAutoUpdate": true,
-  "selectedAuthType": "gemini-api-key",
-  "mcpServers": {},
-  "theme": "GitHub",
-  "preferredEditor": "neovim",
   "default_model": "gemini-2.5-pro-latest",
+  "disableAutoUpdate": true,
   "hideBanner": true,
+  "hooks": {
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "BeforeAgent": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status waiting",
+            "type": "command"
+          }
+        ],
+        "matcher": "ToolPermission"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "workmux register-agent",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "mcpServers": {
+    "Neon": {
+      "headers": {
+        "Authorization": "Bearer "
+      },
+      "type": "http",
+      "url": "https://mcp.neon.tech/mcp"
+    }
+  },
+  "preferredEditor": "neovim",
+  "selectedAuthType": "gemini-api-key",
+  "theme": "GitHub",
   "vimMode": true
 }
