@@ -40,6 +40,7 @@ declare -A symlinks=(
   ["$DOTFILES_DIR/kitty"]="$HOME/.config/kitty"
   ["$DOTFILES_DIR/tmux"]="$HOME/.tmux"
   ["$DOTFILES_DIR/tmux-sessionizer.conf"]="$HOME/.config/tmux-sessionizer/tmux-sessionizer.conf"
+  ["$DOTFILES_DIR/pi/agent/settings.json"]="$HOME/.pi/agent/settings.json"
 )
 
 # Loop through the associative array to create directories and symlinks
