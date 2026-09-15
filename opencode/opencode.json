@@ -1,15 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode-go/deepseek-v4.1-flash",
-  "agent": {
-    "compaction": {
-      "model": "opencode-go/deepseek-v4.1-flash"
-    }
-  },
   "plugin": [
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest",
-    "opencode-cmd-provider"
+    "commandcode-go-opencode-provider"
   ],
   "provider": {
     "commandcode": {

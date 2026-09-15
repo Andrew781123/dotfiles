@@ -106,3 +106,6 @@ export NVM_DIR="$HOME/.nvm"
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
 command -v workmux >/dev/null 2>&1 && eval "$(workmux completions zsh)"
+
+# bun completions
+[ -s "/Users/andrew/.bun/_bun" ] && source "/Users/andrew/.bun/_bun"
