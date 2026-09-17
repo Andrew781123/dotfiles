@@ -19,13 +19,28 @@
     "npm:pi-subagents",
     "npm:pi-web-access",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:@juicesharp/rpiv-todo"
+    "npm:@juicesharp/rpiv-todo",
+    "https://github.com/ayghri/i-have-adhd"
   ],
   "compaction": {
     "enabled": false
   },
+  "subagents": {
+    "agentOverrides": {
+      "worker": {
+        "disabled": true
+      },
+      "reviewer": {
+        "disabled": true
+      },
+      "researcher": {
+        "disabled": true
+      }
+    }
+  },
   "outputPad": 1,
   "defaultProvider": "commandcode",
   "defaultModel": "deepseek/deepseek-v4.1-flash",
-  "hideThinkingBlock": true
+  "hideThinkingBlock": true,
+  "defaultThinkingLevel": "max"
 }
