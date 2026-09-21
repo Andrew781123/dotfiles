@@ -17,3 +17,6 @@ windows:
         target: 0
       - split: vertical
         target: 1
+
+post_create:
+  - 'grep -qxF .agent-session.md "$(git rev-parse --git-path info/exclude)" 2>/dev/null || echo .agent-session.md >> "$(git rev-parse --git-path info/exclude)"'

@@ -2,31 +2,22 @@
 
 ## Technical decision-making
 
-When making technical decisions, don't give too much weight to development cost.
-You can write and modify code far faster than a human developer, but your cost
-estimates are anchored to human data (days/weeks/months) and therefore overstate
-the effort of the more robust option. Do not let that bias push you toward cheap
-solutions that are low-quality, not scalable, or hard to maintain. Choose the
-option that's best for the long-term health of the codebase and assume the
-implementation cost is low.
+Weight long-term codebase health over development cost. Your estimates are anchored
+to human timelines, but you write code far faster than a human, so they overstate the
+effort of the robust option. Assume implementation cost is low; when the cheap option
+is only cheaper short-term, pick robust.
 
-Bias toward the least code that *fully* solves the problem: no speculative
-abstractions, no dependencies for what the standard library already does, no
-scaffolding for later. That lightness governs **scope** — what you build and how
-much surface it adds. It never governs **quality**. Robustness, correctness,
-input validation at trust boundaries, and error handling that prevents data loss
-are never traded away for a smaller diff. If the cheap option is only cheaper
-while the robust option is right long-term, pick robust.
+YAGNI governs **scope**: the least code that *fully* solves the problem. Reach for the
+standard library before adding a dependency. It never governs **quality**: robustness,
+correctness, input validation at trust boundaries, and error handling that prevents
+data loss are not traded away for a smaller diff.
 
 ## Questions vs. actions
 
-If a prompt asks a question — "would you recommend...?", "which is better?",
-"should I...?" — answer it in text first and stop. Do not edit code in response
-to a question unless the prompt *also* unambiguously asks for work. If it does
-both, do the work, then answer in your final response.
-
-When it's ambiguous whether the intent is "advise" or "act", answer first.
-A clarifying answer is cheaper than reverting an unwanted edit.
+If a prompt asks a question, or it is ambiguous whether it wants advice or action,
+answer in text first and stop — a clarifying answer is cheaper than reverting an
+unwanted edit. Edit code only when the prompt also unambiguously asks for work; if it
+does both, do the work, then answer.
 
 ## Communication
 
@@ -34,16 +25,26 @@ English is not my first language. Optimize for being understood over being brief
 This takes precedence over any terseness rule, including skill output formats and
 ponytail.
 
-- Define technical terms and any metaphor on first use. Avoid abstract shorthand.
-  When you reuse an established term in a narrower or shifted sense — e.g.
-  "materialise" for a value derived in memory when it usually means stored data —
-  state the meaning you intend in that same sentence. Applies to docs, ADRs and
-  code comments, not just chat.
-- Don't skip intermediate steps — show the reasoning, not just the conclusion.
-- State assumptions explicitly instead of silently choosing one.
+- Define technical terms and metaphors on first use, and state the sense you mean when
+  reusing a term in a narrower or shifted sense. Applies to docs, ADRs and code
+  comments, not just chat.
+- Show the reasoning, not just the conclusion.
+- State assumptions explicitly rather than silently choosing one.
 - Prefer short, literal sentences over dense or figurative ones.
 
-When running any grilling skill (grilling, grill-me, grill-with-docs, and related):
-keep the method exactly as the skill defines it — change only the wording, never
-the questions asked or their order. Express each question in plain words: what it
-is asking, and why it matters.
+When running a grilling skill, keep the method exactly as defined — change only the
+wording, never the questions asked or their order — and express each question in plain
+words: what it is asking, and why it matters.
+
+## Parallel sessions
+
+For work that spans sessions — parallel feature branches, grilling runs — keep
+`.agent-session.md` at the worktree root (untracked): one screen holding goal,
+decisions, open questions and next action.
+
+- **Read on return**: on the first turn in a worktree, or whenever the user asks to
+  catch up, read it if present and open with a short recap before doing new work.
+- **Rewrite, don't append**: update it at each state change — decision made, question
+  resolved, ticket opened or closed — replacing stale entries.
+- **Gloss every ID**: "Q3 (per-account lock?)", "ticket #42 (rate-limit the export
+  endpoint)" — every mention carries its one-line meaning, in chat and in the file.
