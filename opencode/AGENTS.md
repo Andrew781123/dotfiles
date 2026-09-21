@@ -1,0 +1,1 @@
+/Users/chiholee/.dotfiles/AGENTS.global.md
