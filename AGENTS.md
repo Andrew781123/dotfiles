@@ -8,7 +8,12 @@ Cross-agent context for this dotfiles repo. Read this before making changes.
 - `Brewfile` — Homebrew packages (includes `tuicr`).
 - `.agents/skills/` — Mirror of agent skills installed at `~/.agents/skills/`. Keeps a portable copy for provisioning other machines.
 - `GEMINI.md` — Gemini-specific notes (model preference).
+- `AGENTS.global.md` — Global agent rules (all repos, all machines). `setup.sh` symlinks it to both `~/AGENTS.md` and `~/.config/opencode/AGENTS.md`. This file is the single source of truth; edit it, never the symlinks.
 - `env.secrets.age` — Age-encrypted secrets. Decrypted by `setup.sh` when `key.txt` is present.
+
+## Global rules
+
+`~/.config/opencode/AGENTS.md` is what opencode loads as global instructions; `~/AGENTS.md` covers other tools and directory traversal. Both are symlinks to `AGENTS.global.md`, so editing the symlink edits the repo copy. opencode does **not** parse `@file` references in `AGENTS.md` — symlinks are the mechanism, not `@`.
 
 ## Skills
 
