@@ -1,4 +1,32 @@
 {
   "lastChangelogVersion": "0.85.1",
-  "theme": "dark"
+  "theme": "dark",
+  "enabledModels": [
+    "opencode/big-pickle",
+    "opencode/deepseek-v4-flash-free",
+    "opencode/mimo-v2.5-free",
+    "opencode/nemotron-3-super-free"
+  ],
+  "packages": [
+    "npm:pi-vimmode",
+    "npm:pi-nvim",
+    "npm:pi-commandcode-provider",
+    "npm:@pi-unipi/notify",
+    "npm:pi-mcp-adapter",
+    "npm:awesome-pi-themes",
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:pi-subagents",
+    "npm:pi-web-access",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-atelier"
+  ],
+  "compaction": {
+    "enabled": false
+  },
+  "outputPad": 1,
+  "defaultProvider": "commandcode",
+  "defaultModel": "deepseek/deepseek-v4.1-flash",
+  "hideThinkingBlock": true,
+  "defaultThinkingLevel": "max"
 }
