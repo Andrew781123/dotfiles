@@ -40,6 +40,31 @@ keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 -- keymap.del("n", "<C-n>")
 -- keymap.del("n", "<C-p>")
 
+-- copy file path / file:line range, for pasting into agents
+local function yank_to_clipboard(text)
+  if text == "" then
+    return vim.notify("No file name", vim.log.levels.WARN)
+  end
+  vim.fn.setreg("+", text)
+  vim.notify("Copied " .. text)
+end
+
+local function relpath()
+  return vim.fn.expand("%:.")
+end
+
+keymap.set("n", "<leader>yp", function()
+  yank_to_clipboard(relpath())
+end, { desc = "Copy relative file path" })
+
+keymap.set("x", "<leader>yl", function()
+  local a, b = vim.fn.line("v"), vim.fn.line(".")
+  if a > b then
+    a, b = b, a
+  end
+  yank_to_clipboard(relpath() .. ":" .. (a == b and a or a .. "-" .. b))
+end, { desc = "Copy relative file path:line range" })
+
 -- Terminal toggle keybinding
 keymap.set("n", "<leader>t", function()
   local term_buf = vim.tbl_get(vim.b, "terminal_buf")

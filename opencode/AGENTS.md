@@ -1,1 +1,1 @@
-/Users/chiholee/.dotfiles/AGENTS.global.md
+/Users/andrew/.dotfiles/AGENTS.global.md

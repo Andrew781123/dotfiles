@@ -22,6 +22,7 @@ Bundled skills live under `.agents/skills/` and are installed to `~/.agents/skil
 | Skill | Source | Notes |
 |-------|--------|-------|
 | `glance-config-skill` | local | Glance dashboard config assistant |
+| `workmux-upgrade` | local | Rebuild the locally patched workmux (Unicode tmux target names) after an upgrade |
 | `tuicr` | upstream: `agavra/tuicr` | TUI code-review CLI wrapper for tmux/cmux/Zellij/Herdr |
 
 ## Install skills on another machine
