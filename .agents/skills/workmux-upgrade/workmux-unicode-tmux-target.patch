@@ -1,0 +1,99 @@
+diff --git a/src/command/add.rs b/src/command/add.rs
+index 9f45434..38a36cc 100644
+--- a/src/command/add.rs
++++ b/src/command/add.rs
+@@ -630,6 +630,17 @@ pub fn run(
+         .as_deref()
+         .map(crate::naming::derive_target_name)
+         .transpose()?;
++    // When the user didn't pin a target name (and isn't using --name, which
++    // sets the handle/target explicitly), derive the tmux target directly from
++    // the branch name so Unicode (e.g. Chinese) survives instead of being
++    // transliterated to ASCII with the slugified handle.
++    let target_name = match target_name {
++        Some(explicit) => Some(explicit),
++        None if name.is_none() && !has_multi_worktree => {
++            Some(crate::naming::derive_mux_target_name(branch_name)?)
++        }
++        None => None,
++    };
+     let parent_session = parent_session
+         .as_deref()
+         .map(crate::naming::validate_parent_session)
+diff --git a/src/naming.rs b/src/naming.rs
+index 233ca5e..708c846 100644
+--- a/src/naming.rs
++++ b/src/naming.rs
+@@ -43,6 +43,35 @@ pub fn derive_target_name(name: &str) -> Result<String> {
+     Ok(handle)
+ }
+ 
++/// Slugify a tmux target name while preserving Unicode letters/digits.
++///
++/// Unlike `slug::slugify`, this does NOT transliterate (so CJK stays CJK)
++/// and it does not lowercase non-ASCII. ASCII separators are collapsed to a
++/// single `-` exactly like `slug::slugify`, so ASCII branch names produce
++/// identical results.
++pub fn slugify_keep_unicode(name: &str) -> String {
++    let mut out = String::new();
++    for ch in name.to_lowercase().chars() {
++        if ch.is_alphanumeric() {
++            out.push(ch);
++        } else if !out.is_empty() && !out.ends_with('-') {
++            out.push('-');
++        }
++    }
++    while out.ends_with('-') {
++        out.pop();
++    }
++    out
++}
++
++/// Default tmux target name for a worktree: the branch name with only the
++/// tmux-unsafe separators collapsed, preserving Unicode (e.g. Chinese).
++pub fn derive_mux_target_name(branch_name: &str) -> Result<String> {
++    let name = slugify_keep_unicode(branch_name);
++    validate_handle(&name)?;
++    Ok(name)
++}
++
+ pub fn validate_parent_session(name: &str) -> Result<String> {
+     if name.is_empty() {
+         bail!("Parent session cannot be empty");
+@@ -222,6 +251,36 @@ mod tests {
+         assert_eq!(result, "api-feature");
+     }
+ 
++    // === Unicode-preserving target name tests ===
++
++    #[test]
++    fn slugify_keep_unicode_matches_slugify_for_ascii() {
++        for input in [
++            "feature/auth",
++            "prj-4120/create-new-tags",
++            "My Cool Feature",
++            "Feature! @#$%",
++            "a__b--c",
++            "--leading-and-trailing--",
++        ] {
++            assert_eq!(slugify_keep_unicode(input), slugify(input), "input: {input}");
++        }
++    }
++
++    #[test]
++    fn slugify_keep_unicode_preserves_cjk() {
++        assert_eq!(slugify_keep_unicode("feature/中文分支"), "feature-中文分支");
++        assert_eq!(slugify_keep_unicode("中文分支"), "中文分支");
++    }
++
++    #[test]
++    fn derive_mux_target_name_preserves_cjk() {
++        assert_eq!(
++            derive_mux_target_name("feature/中文分支").unwrap(),
++            "feature-中文分支"
++        );
++    }
++
+     // === Error cases ===
+ 
+     #[test]

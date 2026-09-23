@@ -3,16 +3,8 @@
   "model": "opencode-go/deepseek-v4.1-flash",
   "plugin": [
     "@mohak34/opencode-notifier@latest",
-    "@dietrichgebert/ponytail@latest",
-    "commandcode-go-opencode-provider"
+    "@dietrichgebert/ponytail@latest"
   ],
-  "provider": {
-    "commandcode": {
-      "npm": "commandcode-go-opencode-provider",
-      "name": "Command Code",
-      "env": ["COMMANDCODE_API_KEY"]
-    }
-  },
   "default_agent": "build",
   "permission": {
     "external_directory": {
