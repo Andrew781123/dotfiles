@@ -60,6 +60,16 @@ function entry(m: ApiModel) {
     // models. opencode gates image input on `modalities.input`, not `attachment`.
     attachment: true,
     modalities: { input: ["text", "image"], output: ["text"] },
+    ...(/muse-spark-1\.3-contributor/i.test(m.id)
+      ? {
+          variants: Object.fromEntries(
+            ["minimal", "low", "medium", "high", "xhigh"].map((effort) => [
+              effort,
+              { reasoningEffort: effort },
+            ]),
+          ),
+        }
+      : {}),
     ...(/^gpt-6(?:[.-]|$)/i.test(m.id)
       ? { variants: { xhigh: { reasoningEffort: "xhigh" }, max: { reasoningEffort: "max" } } }
       : {}),
