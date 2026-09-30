@@ -15,7 +15,7 @@ function apiKey(): string | undefined {
     if (!existsSync(p)) continue
     try {
       const j = JSON.parse(readFileSync(p, "utf-8"))
-      const v = j["command-code"] ?? j.commandcode
+      const v = j["command-code"] ?? j.commandcode ?? j.apiKey
       const key = typeof v === "string" ? v : v?.key ?? v?.access
       if (key) return key
     } catch {}
@@ -71,6 +71,10 @@ function entry(m: ApiModel) {
         }
       : {}),
     ...(/^gpt-6(?:[.-]|$)/i.test(m.id)
+      ? { variants: { xhigh: { reasoningEffort: "xhigh" }, max: { reasoningEffort: "max" } } }
+      : {}),
+    // Muse Spark accepts xhigh/max on top of opencode's default low/medium/high.
+    ...(/muse-spark/i.test(m.id)
       ? { variants: { xhigh: { reasoningEffort: "xhigh" }, max: { reasoningEffort: "max" } } }
       : {}),
     ...(m.context_length
