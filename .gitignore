@@ -4,3 +4,4 @@ env.secrets
 key.txt
 .env
 .tmux.local
+opencode/opencode-notifier-state.json

@@ -53,17 +53,22 @@ local function relpath()
   return vim.fn.expand("%:.")
 end
 
-keymap.set("n", "<leader>yp", function()
+keymap.set("n", "gob", function()
   yank_to_clipboard(relpath())
 end, { desc = "Copy relative file path" })
 
-keymap.set("x", "<leader>yl", function()
+keymap.set("x", "go", function()
   local a, b = vim.fn.line("v"), vim.fn.line(".")
   if a > b then
     a, b = b, a
   end
   yank_to_clipboard(relpath() .. ":" .. (a == b and a or a .. "-" .. b))
+  vim.cmd("normal! \27")
 end, { desc = "Copy relative file path:line range" })
+
+keymap.set("n", "goo", function()
+  yank_to_clipboard(relpath() .. ":" .. vim.fn.line("."))
+end, { desc = "Copy relative file path:line" })
 
 -- Terminal toggle keybinding
 keymap.set("n", "<leader>t", function()

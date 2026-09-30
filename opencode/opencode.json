@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode-go/deepseek-v4.1-flash",
   "plugin": [
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest"
