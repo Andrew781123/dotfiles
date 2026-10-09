@@ -94,13 +94,15 @@ other machine is already signed in.
 7. Verify (all must hold):
 
    ```bash
-   opencode debug config > /tmp/oc-v2.json
-   jq -r '.provider | keys[]' /tmp/oc-v2.json | head   # providers present, no error
+   opencode models | grep -c '^commandcode/'   # 87 on a current catalog
+   opencode plugin list                        # local + package plugins active
+   opencode auth list                          # expected providers stored
    ```
 
-   Then in the TUI: `/models` lists models, `/mcps` connects, one short message
-   completes on the default model, the moonfly theme renders, and a workmux pane
-   status flips working → done during that message.
+   Then run `opencode` and confirm: `/models` lists commandcode models, one
+   short message completes, the moonfly theme renders, and a workmux pane
+   status flips working → done during that message. (V2's `opencode debug
+   config` lists configuration *sources*, not the merged config.)
 
 ## Rollback
 
