@@ -1,14 +1,16 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
+  "plugins": [
     "@mohak34/opencode-notifier@latest",
     "@dietrichgebert/ponytail@latest",
     "@brainervirus/opencode-commandcode@latest"
   ],
   "default_agent": "build",
-  "permission": {
-    "external_directory": {
-      "/tmp/**": "allow"
+  "permissions": [
+    {
+      "action": "external_directory",
+      "resource": "/tmp/*",
+      "effect": "allow"
     }
-  }
+  ]
 }
