@@ -4,6 +4,6 @@
   "plugin": [
     "opencode-cmd-provider",
     "oc-tps@latest",
-    "@leohenon/opencode-vim-plugin"
+    "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.18.1"
   ]
 }

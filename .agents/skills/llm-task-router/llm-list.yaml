@@ -134,7 +134,7 @@ models:
     cost: "in $0.10 / out $0.20 / cache $0.002"
     strengths: [edits, multimodal]
     also_on:
-      commandcode: commandcode/meta/muse-spark-1.3-contributor
+      commandcode: commandcode/muse-spark-1.3-contributor
     notes: ~0.56x 4.1-flash. Trains on data.
 
   - name: MiMo v2.5
@@ -148,7 +148,7 @@ models:
     cost: "in $0.14 / out $0.28 / cache $0.003"
     strengths: [edits, long-context, multimodal]
     also_on:
-      commandcode: commandcode/xiaomi/mimo-v2.5
+      commandcode: commandcode/mimo-v2.5
     notes: ~0.79x 4.1-flash. Cheap and fast; effort not adjustable.
 
   - name: MiMo v2.5 Pro
@@ -162,7 +162,7 @@ models:
     cost: "in $0.435 / out $0.87 / cache $0.004"
     strengths: [long-context, agentic]
     also_on:
-      commandcode: commandcode/xiaomi/mimo-v2.5-pro
+      commandcode: commandcode/mimo-v2.5-pro
     notes: Pricier on Go (~1.8x); cheap on commandcode (~99% off). Light only via cmd.
 
   - name: DeepSeek V4 Flash
@@ -176,7 +176,7 @@ models:
     cost: "in $0.15 / out $0.60 / cache $0.003"
     strengths: [coding, agentic]
     also_on:
-      commandcode: commandcode/deepseek/deepseek-v4-flash
+      commandcode: commandcode/deepseek-v4-flash
     notes: Same cost/behaviour as 4.1-flash but cheaper. CommandCode peak $0.44/$1.32.
 
   - name: DeepSeek V4 Flash (vision)
@@ -190,7 +190,7 @@ models:
     cost: "in $0.15 / out $0.60 / cache $0.003"
     strengths: [coding, vision]
     also_on:
-      commandcode: commandcode/deepseek/deepseek-v4-flash-vision-exp
+      commandcode: commandcode/deepseek-v4-flash-vision-exp
     notes: Use when the task needs image/screenshot input.
 
   # ============ STANDARD — the workhorses ============
@@ -231,7 +231,7 @@ models:
     cost: "in $0.15 / out $0.47 / cache $0.016"
     strengths: [agentic, vision, long-context]
     also_on:
-      commandcode: commandcode/Qwen/Qwen3.8-Flash
+      commandcode: commandcode/qwen3.8-flash
     notes: "Cheap input, context-heavy: ~2.6x blended vs 4.1-flash."
 
   - name: GLM 5.3 Flash
@@ -245,7 +245,7 @@ models:
     cost: "in $0.15 / out $0.50 / cache $0.03"
     strengths: [coding, vision, long-context]
     also_on:
-      commandcode: commandcode/z-ai/glm-5.3-flash
+      commandcode: commandcode/glm-5.3-flash
     notes: "Cheap input, context-heavy: ~4.4x blended vs 4.1-flash."
 
   - name: MiniMax M3
@@ -259,7 +259,7 @@ models:
     cost: "in $0.30 / out $1.20 / cache $0.06"
     strengths: [coding, multimodal, agentic]
     also_on:
-      commandcode: commandcode/MiniMaxAI/MiniMax-M3
+      commandcode: commandcode/minimax-m3
     notes: Your opencode.json default model. Effort not adjustable.
 
   # ============ HEAVY — complex reasoning ============
@@ -274,7 +274,7 @@ models:
     cost: "in $0.66 / out $1.98 / cache $0.022"
     strengths: [deep-reasoning, hard-bugs, architecture]
     also_on:
-      commandcode: commandcode/deepseek/deepseek-v4-pro
+      commandcode: commandcode/deepseek-v4-pro
     notes: Effort is high/max only — pick the value explicitly.
 
   - name: Grok 4.6
@@ -288,7 +288,7 @@ models:
     cost: "in $2.00 / out $6.00 / cache $0.50"
     strengths: [deep-reasoning, coding, agentic]
     also_on:
-      commandcode: commandcode/xai/grok-4.6
+      commandcode: commandcode/grok-4.6
     notes: Expensive; reserve for genuinely hard problems.
 
   - name: Qwen 3.8 Max
@@ -302,7 +302,7 @@ models:
     cost: "in $2.00 / out $6.00 / cache $0.25"
     strengths: [deep-reasoning, long-context, architecture]
     also_on:
-      commandcode: commandcode/Qwen/Qwen3.8-Max
+      commandcode: commandcode/qwen3.8-max
     notes: Big context + strong reasoning; expensive.
 
   - name: Kimi K3
@@ -316,7 +316,7 @@ models:
     cost: "in $3.00 / out $15.00 / cache $0.30"
     strengths: [long-horizon, hard-bugs, agentic]
     also_on:
-      commandcode: commandcode/moonshotai/Kimi-K3
+      commandcode: commandcode/kimi-k3
     notes: Effort is max-only. Most expensive per output token.
 
   - name: GLM 5.3
@@ -330,5 +330,5 @@ models:
     cost: "in $1.40 / out $4.40 / cache $0.26"
     strengths: [coding, deep-reasoning]
     also_on:
-      commandcode: commandcode/zai-org/GLM-5.3
+      commandcode: commandcode/glm-5.3
     notes: Frontier GLM; strong on long-horizon coding.

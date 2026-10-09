@@ -25,6 +25,9 @@ fi
 # --- Symlinking ---
 echo "Setting up dotfiles symlinks..."
 
+# Ensure the opencode config dir symlink exists before anything links into it
+ln -sfn "$DOTFILES_DIR/opencode" "$HOME/.config/opencode"
+
 # Define symlinks as an associative array for clarity
 # format: source_path -> destination_path
 declare -A symlinks=(
