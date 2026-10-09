@@ -118,6 +118,10 @@ commit reachable; do not rewrite it away.
   the repo on purpose (cross-machine parity); commit its changes deliberately.
 - First v2 start installs npm plugins into `~/.cache/opencode`; a slow first
   launch is normal.
+- After changing `plugins`/`cli.json`, a background service that was already
+  running can serve stale plugin and model lists. If `opencode models` or
+  `opencode plugin list` look wrong, run `opencode service restart` and check
+  again.
 - `opencode/opencode.json` carries no MCP servers after the migration; add
   machine-specific ones with `opencode mcp add --global`.
 - `.ponytail-active` and the notifier state file are runtime state inside the
