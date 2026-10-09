@@ -4,6 +4,9 @@
     "name": "moonfly",
     "mode": "system"
   },
+  "tabs": {
+    "mode": "off"
+  },
   "plugins": [
     "opencode-cmd-provider",
     "oc-tps@latest",
