@@ -10,6 +10,7 @@ Cross-agent context for this dotfiles repo. Read this before making changes.
 - `GEMINI.md` — Gemini-specific notes (model preference).
 - `AGENTS.global.md` — Global agent rules (all repos, all machines). `setup.sh` symlinks it to both `~/AGENTS.md` and `~/.config/opencode/AGENTS.md`. This file is the single source of truth; edit it, never the symlinks.
 - `env.secrets.age` — Age-encrypted secrets. Decrypted by `setup.sh` when `key.txt` is present.
+- `docs/ocv-vps-proxy.md` — how `ocv` routes opencode through the Tokyo VPS HTTP proxy (region-locked models), incl. the opencode v2 background-server gotcha and replication steps.
 
 ## Global rules
 

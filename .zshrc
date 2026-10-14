@@ -29,6 +29,15 @@ alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 alias y="yazi"
 alias oc="opencode --port"
+ocv() {
+  if ! lsof -nP -iTCP:8888 -sTCP:LISTEN >/dev/null 2>&1; then
+    ssh -f -N vps-open || { echo "ocv: could not start SSH tunnel to vps-open" >&2; return 1; }
+  fi
+  HTTPS_PROXY=http://127.0.0.1:8888 \
+  HTTP_PROXY=http://127.0.0.1:8888 \
+  NO_PROXY=localhost,127.0.0.1 \
+  opencode "$@"
+}
 alias wm='workmux'
 eval $(thefuck --alias)
 
