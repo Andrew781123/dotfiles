@@ -72,7 +72,19 @@ other machine is already signed in.
    Completion: `opencode --version` reports 2.x, and `readlink ~/.config/opencode`
    points at the dotfiles repo.
 
-4. Check symlink health (v2 reads `~/.config/opencode/AGENTS.md`):
+4. Refresh the workmux status plugin. The v2 layout
+   (`plugins/workmux-status/{index,tui,status}.ts`) ships from workmux >= 0.1.274
+   and the v1 file must be gone, or it fails with "Plugin must export a default
+   definition". The three files are tracked in this repo, so a pull already
+   provides them; only install via `workmux setup --hooks` if you changed them
+   by hand. Check the binary is new enough:
+
+   ```bash
+   workmux --version   # >= 0.1.274; rebuild the patched binary via the workmux-upgrade skill
+   ls ~/.config/opencode/plugins/workmux-status.ts 2>/dev/null && echo "v1 file still present"
+   ```
+
+5. Check symlink health (v2 reads `~/.config/opencode/AGENTS.md`):
 
    ```bash
    find -L ~/.config/opencode -maxdepth 3 -type l ! -exec test -e {} \; -print
@@ -80,18 +92,18 @@ other machine is already signed in.
 
    Completion: no output.
 
-5. Mirror the bundled skills so agents discover them:
+6. Mirror the bundled skills so agents discover them:
 
    ```bash
    cp -R ~/.dotfiles/.agents/skills/* ~/.agents/skills/
    ```
 
-6. Reconnect auth. Run `opencode auth list`; for each missing provider, open
+7. Reconnect auth. Run `opencode auth list`; for each missing provider, open
    `opencode` and run `/connect` (or `opencode auth login <provider>`).
    `commandcode` needs `@brainervirus/opencode-commandcode` loaded (already in
    repo config); it also accepts `COMMANDCODE_API_KEY`.
 
-7. Verify (all must hold):
+8. Verify (all must hold):
 
    ```bash
    opencode models | grep -c '^commandcode/'   # 87 on a current catalog

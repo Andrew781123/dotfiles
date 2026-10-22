@@ -49,7 +49,7 @@ overwriting `~/.cargo/bin/workmux` with unpatched upstream.
 ## Upgrade procedure
 
 ```bash
-VER=v0.1.264                       # target tag; see https://github.com/raine/workmux/releases
+VER=v0.1.276                       # target tag; see https://github.com/raine/workmux/releases
 SKILL=~/.dotfiles/.agents/skills/workmux-upgrade
 
 # 1. Fresh source at the tag (or main/master for latest)
