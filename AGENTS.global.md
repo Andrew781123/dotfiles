@@ -19,6 +19,12 @@ answer in text first and stop — a clarifying answer is cheaper than reverting 
 unwanted edit. Edit code only when the prompt also unambiguously asks for work; if it
 does both, do the work, then answer.
 
+## Shell
+
+Pass the shell tool's `workdir` instead of prefixing a command with `cd`. Inside one
+command, `cd` moves the directory for everything after it, so a later path on the same
+line resolves from the new directory.
+
 ## Communication
 
 English is not my first language. Optimize for being understood over being brief.
