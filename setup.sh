@@ -39,6 +39,7 @@ declare -A symlinks=(
   ["$DOTFILES_DIR/.config/nvim"]="$HOME/.config/nvim"
   ["$DOTFILES_DIR/.config/yazi"]="$HOME/.config/yazi"
   ["$DOTFILES_DIR/.config/workmux"]="$HOME/.config/workmux"
+  ["$DOTFILES_DIR/.config/tmux"]="$HOME/.config/tmux"
   ["$DOTFILES_DIR/ghostty"]="$HOME/.config/ghostty"
   ["$DOTFILES_DIR/kitty"]="$HOME/.config/kitty"
   ["$DOTFILES_DIR/tmux"]="$HOME/.tmux"

@@ -1,0 +1,13 @@
+#!/bin/sh
+# ^d in the sesh picker: kill the session; if it is a workmux worktree
+# session, remove the worktree too. workmux refuses on uncommitted or
+# unmerged work, so this cannot destroy anything silently.
+set -u
+sess=${1:?usage: sesh-kill <session>}
+pane=$(tmux list-panes -t "=$sess" -F '#{pane_current_path}' 2>/dev/null | head -n 1)
+top=$(git -C "${pane:-/}" rev-parse --show-toplevel 2>/dev/null) || top=
+if [ -n "${top:-}" ] && git -C "$top" config --get "workmux.worktree.$(basename "$top").mode" >/dev/null 2>&1; then
+  cd "$top" && workmux remove
+else
+  tmux kill-session -t "=$sess"
+fi

@@ -41,16 +41,3 @@ ponytail.
 When running a grilling skill, keep the method exactly as defined — change only the
 wording, never the questions asked or their order — and express each question in plain
 words: what it is asking, and why it matters.
-
-## Parallel sessions
-
-For work that spans sessions — parallel feature branches, grilling runs — keep
-`.agent-session.md` at the worktree root (untracked): one screen holding goal,
-decisions, open questions and next action.
-
-- **Read on return**: on the first turn in a worktree, or whenever the user asks to
-  catch up, read it if present and open with a short recap before doing new work.
-- **Rewrite, don't append**: update it at each state change — decision made, question
-  resolved, ticket opened or closed — replacing stale entries.
-- **Gloss every ID**: "Q3 (per-account lock?)", "ticket #42 (rate-limit the export
-  endpoint)" — every mention carries its one-line meaning, in chat and in the file.

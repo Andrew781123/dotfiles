@@ -1,6 +1,9 @@
 agent: opencode
 nerdfont: true
 mode: session
+# ^d in the sesh picker removes the worktree non-interactively. Uncommitted
+# changes are still blocked; only the unmerged-branch prompt is skipped.
+confirm_unmerged_removal: false
 
 files:
   copy:
